@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="index.js" defer></script>
+	<title></title>
+</head>
+<body>
+	<div id="app">
+		<header>
+			<nav>
+				<ul>
+					<menu-items
+						v-for="item in menu"
+						:key="item.id"
+						v-bind:item="item">
+					</menu-items>
+				</ul>
+			</nav>
+		</header>
+
+		<article>
+			<p>All right. Wow. Um, I am never going to forget today. Not a chance. I don't think I could ever give back to you what you have given me today. Who here has done something stupid in their lives? Like skipped out on study hall or mix up the difference between "A" gym and "B" gym, that sort of thing? Show of hands, anybody, yes, a bunch of you, okay. Well, me too, I've done something stupid which I would like to share. Ummm. [period bell rings] Should we go?</p>
+			<p>Ah. All right. I came here today because I promised you tuition and tuition is very valuable. But you know what's invaluable is intuition. You know what that is? That is the ability to know when something is about to happen. Does anybody out there have intuition? Know what's gonna happen next? Nobody? Okay, you're going to make me say it. All right, I am so proud of all of you. Derrick, and Lefevre, and Ben, and Ayana, and Mikela, and Nikki and Jason, and... I'm sorry, okay, sorry spacing, your name?</p>
+		</article>
+
+		<section>
+			Identity theft is not a joke, Jim! Millions of families suffer every year!
+		</section>
+
+		<footer>
+			<span>{{ copyright }}</span>
+		</footer>
+	</div>
+</body>
+</html>
