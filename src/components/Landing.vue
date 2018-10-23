@@ -1,8 +1,8 @@
 <template>
-  <div>
-    <app-home :homeData="home"></app-home>
-    <app-features :features="features"></app-features>
-    <app-about :persons="about"></app-about>
+  <div class="bg-transparent">
+    <app-home class="bg-transparent mb-3 h-custom-full" :homeData="home"></app-home>
+    <app-features class="d-md-flex mb-3 h-custom-full bg-light py-3" :features="features"></app-features>
+    <app-about class="h-custom-full" :persons="about"></app-about>
   </div>
 </template>
 
@@ -31,5 +31,8 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+    .h-custom-full {
+        min-height: 80vh;
+    }
 </style>

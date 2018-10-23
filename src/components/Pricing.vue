@@ -1,17 +1,21 @@
 <template>
-    <div class="flex-grow-1 d-flex align-items-center justify-content-around">
-        <div class="card text-center" v-for="price in prices">
-            <div class="card-body">
-                <h1 class="card-title">{{ price.title }}</h1>
-                <p class="card-text">{{ price.details }}</p>
-                <ul class="list-group">
-                    <li class="list-group-item" v-for="unit in price.units">
-                        {{ unit }}
-                    </li>
-                </ul>
-            </div>
-            <div class="card-body">
-                <a class="card-link btn btn-primary" href="#">Purchase</a>
+    <div class="flex-grow-1">
+        <h1 class="text-center my-3">Pricing</h1>
+        <div class="d-flex flex-column flex-md-row align-items-center align-items-md-baseline justify-content-around">
+            <div class="card text-center" v-for="price in prices">
+                <div class="card-body">
+                    <h2 class="card-title">{{ price.price }}</h2>
+                    <h2 class="card-subtitle">{{ price.title }}</h2>
+                    <p class="card-text">{{ price.details }}</p>
+                    <ul class="list-group">
+                        <li class="list-group-item" v-for="unit in price.units">
+                            {{ unit }}
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <a class="card-link btn" :class="price.buttonType" href="#">{{ price.action }}</a>
+                </div>
             </div>
         </div>
     </div>

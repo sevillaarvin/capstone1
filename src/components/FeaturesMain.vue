@@ -1,6 +1,6 @@
 <template>
     <div class="flex-grow-1 d-flex flex-column">
-    	<h1 class="text-center">Features</h1>
+    	<h1 class="text-center my-3">Features</h1>
         <app-features class="" :features="appData.features"></app-features>
     </div>
 </template>

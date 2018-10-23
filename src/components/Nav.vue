@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#app-nav-content" @click.prevent>
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -16,10 +16,14 @@
                     </li>
                 </router-link>
             </ul>
+            <form class="form-inline my-2 d-md-none">
+                <input class="form-control" type="search" placeholder="Quezon City rent">
+                <button class="btn btn-success" type="submit">Search</button>
+            </form>
         </div>
-        <form class="form-inline my-2 d-none d-lg-flex">
-            <input class="form-control" type="search" placeholder="Quezon City rent">
-            <button class="btn btn-outline-success" type="submit">Search</button>
+        <form class="form-inline my-2">
+            <input class="form-control d-none d-md-inline" type="search" placeholder="Quezon City rent">
+            <button class="btn btn-success d-none d-lg-inline" type="submit">Search</button>
         </form>
     </nav>
 </template>
