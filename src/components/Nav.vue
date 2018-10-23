@@ -8,7 +8,7 @@
                 <img class="logo rounded-circle d-inline-block align-top" :src="logo" alt="" width="50" height="50">
             </a>
         </router-link>
-        <div class="collapse navbar-collapse justify-content-center" id="app-nav-content">
+        <div class="collapse navbar-collapse" id="app-nav-content">
             <ul class="navbar-nav">
                 <router-link v-for="link in links" :to="{name: link.name}">
                     <li class="nav-item">
@@ -17,6 +17,10 @@
                 </router-link>
             </ul>
         </div>
+        <form class="form-inline my-2 d-none d-lg-flex">
+            <input class="form-control" type="search" placeholder="Quezon City rent">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
     </nav>
 </template>
 <script>

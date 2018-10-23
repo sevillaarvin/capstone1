@@ -28,7 +28,7 @@ export default {
         appData: {
             home: {
                 title: "iWantRent",
-                content: "Description",
+                content: "Rent fast, rent safe",
                 callToAction: "Rent now",
                 secondaryAction: "List property",
                 img: "src/assets/images/construction.jpeg"
