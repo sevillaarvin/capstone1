@@ -2,7 +2,9 @@
     <footer class="bg-transparent">
         <ul class="nav justify-content-center">
             <li class="nav-item" v-for="link in links">
-                <a class="nav-link" :href="link.link">{{ link.name }}</a>
+                <router-link :to="link.name">
+                    <a class="nav-link">{{ link.description }}</a>
+                </router-link>
             </li>
             <span class="d-flex align-items-center " v-html="copyright"></span>
         </ul>

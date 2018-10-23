@@ -6,6 +6,8 @@ import Features from '../components/FeaturesMain.vue'
 import Pricing from '../components/Pricing.vue'
 import About from '../components/AboutMain.vue'
 import Contact from '../components/Contact.vue'
+import Terms from '../components/Terms.vue'
+import Privacy from '../components/Privacy.vue'
 
 Vue.use(VueRouter)
 
@@ -36,6 +38,16 @@ export default new VueRouter({
             path: "/contact",
             name: "Contact",
             component: Contact
+        },
+        {
+            path: "/terms",
+            name: "Terms",
+            component: Terms
+        },
+        {
+            path: "/privacy",
+            name: "Privacy",
+            component: Privacy
         }
     ]
 })

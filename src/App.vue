@@ -31,18 +31,21 @@ export default {
                 {
                     title: "Feature1",
                     content: "This is feature 1",
+                    longDescription: "This is feature 1. It has such and such feature. All of the features in feature 1 are feature 1. This is a very nice feature because feature 1.",
                     img: "src/assets/images/feature1.jpeg",
                     read: "Read more"
                 },
                 {
                     title: "Feature2",
                     content: "This is feature 2",
+                    longDescription: "This is feature 2. It has such and such feature. All of the features in feature 2 are feature 2. This is a very nice feature because feature 2.",
                     img: "src/assets/images/feature2.jpeg",
                     read: "Read more"
                 },
                 {
                     title: "Feature3",
                     content: "This is feature 3",
+                    longDescription: "This is feature 3. It has such and such feature. All of the features in feature 3 are feature 3. This is a very nice feature because feature 3.",
                     img: "src/assets/images/feature3.jpeg",
                     read: "Read more"
                 }
@@ -157,12 +160,19 @@ export default {
         footer: {
             footerLinks: [
                 {
-                    link: "#terms",
-                    name: "Terms and Conditions"
+                    link: "#",
+                    name: "Terms",
+                    description: "Terms and Conditions"
                 },
                 {
-                    link: "#help",
-                    name: "Help"
+                    link: "#",
+                    name: "Privacy",
+                    description: "Privacy Policy"
+                },
+                {
+                    link: "#",
+                    name: "Help",
+                    description: "Help"
                 }
             ],
 	    copyright: "&copy; iWantRent 2018"
