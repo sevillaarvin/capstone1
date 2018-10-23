@@ -1,6 +1,7 @@
 <template>
-    <div class="flex-grow-1 d-flex align-items-center">
-        <app-features :features="appData.features"></app-features>
+    <div class="flex-grow-1 d-flex flex-column">
+    	<h1 class="text-center">Features</h1>
+        <app-features class="" :features="appData.features"></app-features>
     </div>
 </template>
 <script>

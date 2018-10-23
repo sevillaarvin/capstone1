@@ -1,0 +1,38 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.jumbotron hr {
+	background-color: #fff;
+}
+
+#jumbo-land {
+	padding-top: 25%;
+	height: 100vh;
+	background-color: #333;
+	border-radius: 0;
+}
+
+
+.btn a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.jumbotron h1 {
+	color: #f2f2f2;
+}
+
+.carousel-item .img-fluid {
+	max-height: 500px;
+	width: 100%;
+}
+
+#home-landing {
+	background-color: #333;
+	padding: 30%;
+	color: #fff;
+}
+
