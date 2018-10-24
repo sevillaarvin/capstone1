@@ -113,40 +113,44 @@ export default {
 		    buttonType: "btn-outline-primary"
                 }
             ],
-            about: [
-                {
-                    name: "Person1",
-                    details: "This is person 1. He is a person.",
-                    img: "src/assets/images/person.jpeg"
-                },
-                {
-                    name: "Person2",
-                    details: "This is person 2. He is a person.",
-                    img: "src/assets/images/person.jpeg"
-                },
-                {
-                    name: "Person3",
-                    details: "This is person 3. He is a person.",
-                    img: "src/assets/images/person.jpeg"
-                }
-            ],
-	    contact: [
-	    	{
-			name: "Name",
-			type: "text",
-			placeholder: "John Doe"
-		},
-	    	{
-			name: "Email",
-			type: "email",
-			placeholder: "john.doe@example.com"
-		},
-	    	{
-			name: "Phone",
-			type: "text",
-			placeholder: "09123456789"
-		}
-	    ]
+            about: {
+                team: [
+                    {
+                        name: "Person1",
+                        details: "This is person 1. He is a person. He is a such and such person with such and such background.",
+                        img: "src/assets/images/person.jpeg"
+                    },
+                    {
+                        name: "Person2",
+                        details: "This is person 2. He is a person. He is a such and such person with such and such background.",
+                        img: "src/assets/images/person.jpeg"
+                    },
+                    {
+                        name: "Person3",
+                        details: "This is person 3. He is a person. He is a such and such person with such and such background.",
+                        img: "src/assets/images/person.jpeg"
+                    }
+                ],
+                vision: "Our vision is a world where there is always a home for each and every individual in our society today that is completely lacking.",
+                mission: "Our mission is to provide the last platform for real estate transactions to provide lessors and lessees with safety and ease of transactions."
+            },
+	        contact: [
+	        	{
+    	    		name: "Name",
+    	    		type: "text",
+    	    		placeholder: "John Doe"
+    	    	},
+    	        	{
+    	    		name: "Email",
+    	    		type: "email",
+    	    		placeholder: "john.doe@example.com"
+    	    	},
+    	        	{
+    	    		name: "Phone",
+    	    		type: "text",
+    	    		placeholder: "09123456789"
+    	    	}
+	        ]
         },
         nav: {
             navLinks: [

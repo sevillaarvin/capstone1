@@ -15,7 +15,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="card-body">
+                <div class="py-3">
                     <a class="card-link btn" :class="price.buttonType" href="#">{{ price.action }}</a>
                 </div>
             </div>
@@ -34,5 +34,8 @@
         }
     }
 </script>
-<style>
+<style scoped>
+    .card {
+        min-height: 100%;
+    }
 </style>

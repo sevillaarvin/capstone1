@@ -7,34 +7,35 @@
         <app-features class="d-md-flex py-3 h-custom-half bg-light py-3" :features="features"></app-features>
     </div>
     <div class="col-12">
-        <app-about class="h-custom-half py-3 bg-dark rounded-bottom" :persons="about"></app-about>
+        <app-about class="h-custom-half py-3 bg-dark rounded-bottom" :persons="about.team"></app-about>
     </div>
   </div>
 </template>
 
 <script>
-import Home from './Home.vue'
-import Features from './Features.vue'
-import About from './About.vue'
-
-export default {
-  name: 'app',
-  props: {
-    appData: Object
-  },
-  data () {
-    return {
-        home: this.appData.home,
-        features: this.appData.features,
-        about: this.appData.about
+    import Home from './Home.vue'
+    import Features from './Features.vue'
+    import About from './About.vue'
+    
+    export default {
+      name: 'app',
+      props: {
+        appData: Object
+      },
+      data () {
+        return {
+            home: this.appData.home,
+            features: this.appData.features,
+            about: this.appData.about
+        }
+      },
+      components: {
+        appHome: Home,
+        appFeatures: Features,
+        appAbout: About
+      }
     }
-  },
-  components: {
-    appHome: Home,
-    appFeatures: Features,
-    appAbout: About
-  }
-}
+
 </script>
 
 <style scoped>
