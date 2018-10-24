@@ -1,6 +1,6 @@
 <template>
-    <div class="">
-        <div class="jumbotron bg-transparent">
+    <div class="row">
+        <div class="col-12 jumbotron bg-transparent">
             <h1 class="display-4">{{ homeData.title }}</h1>
             <p class="lead"> {{ homeData.content }}</p>
             <hr class="my-4">

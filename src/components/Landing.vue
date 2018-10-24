@@ -1,8 +1,14 @@
 <template>
-  <div class="bg-transparent">
-    <app-home class="bg-transparent mb-3 h-custom-full" :homeData="home"></app-home>
-    <app-features class="d-md-flex mb-3 h-custom-full bg-light py-3" :features="features"></app-features>
-    <app-about class="h-custom-full" :persons="about"></app-about>
+  <div class="row bg-transparent">
+    <div class="col-12">
+        <app-home class="bg-transparent mb-3 h-custom-full" :homeData="home"></app-home>
+    </div>
+    <div class="col-12">
+        <app-features class="d-md-flex mb-3 h-custom-full bg-light py-3" :features="features"></app-features>
+    </div>
+    <div class="col-12">
+        <app-about class="h-custom-half mb-3" :persons="about"></app-about>
+    </div>
   </div>
 </template>
 
@@ -34,5 +40,9 @@ export default {
 <style scoped>
     .h-custom-full {
         min-height: 80vh;
+    }
+
+    .h-custom-half {
+        min-height: 40vh;
     }
 </style>

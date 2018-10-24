@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="d-flex flex-column">
     <app-nav :links="nav.navLinks" :logo="nav.logo"></app-nav>
-        <div class="container flex-grow-1 bg-custom-image">
+        <div class="container flex-grow-1 bg-custom-image shadow rounded-bottom">
 
             <router-view class="" :appData="appData"></router-view>
         </div>
@@ -175,7 +175,7 @@ export default {
                     description: "Help"
                 }
             ],
-	    copyright: "&copy; iWantRent 2018"
+	        copyright: "&copy; iWantRent 2018"
         }
     }
   },
@@ -187,13 +187,12 @@ export default {
 </script>
 
 <style scoped>
-#app {
-  font-family: 'Niramit', 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  min-height: 100vh;
-  color: #1F2421;
-}
-
+    #app {
+      font-family: 'Niramit', 'Avenir', Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    
+      min-height: 100vh;
+      color: #1F2421;
+    }
 </style>
