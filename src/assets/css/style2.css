@@ -36,3 +36,35 @@
 	color: #fff;
 }
 
+#jumbotron-about {
+	background-color: #141414;
+	height: 90vh;
+	border-radius: 0;
+}
+
+#landing-about {
+	color: #f2f2f2;
+	font-size: 5em;
+	padding-top: 20vh;
+	letter-spacing: 5px;
+}	
+
+.fadeIn {
+	animation-duration: 5s;
+}
+
+.about-tags {
+	font-weight: bold;
+}
+
+#mission {
+	height: 100%;
+	background-color: #141414;
+	color: #f2f2f2;
+}
+
+#vision {
+	height: 100%;
+	background-color: #f2f2f2;
+	color: #141414
+}

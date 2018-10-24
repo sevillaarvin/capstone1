@@ -5,7 +5,7 @@
 
             <router-view class="" :appData="appData"></router-view>
         </div>
-    <app-footer :links="footer.footerLinks" :copyright="footer.copyright"></app-footer>
+    <app-footer :socials="footer.socials" :links="footer.footerLinks" :copyright="footer.copyright"></app-footer>
   </div>
 </template>
 
@@ -173,6 +173,28 @@ export default {
                     link: "#",
                     name: "Contact",
                     description: "Help"
+                }
+            ],
+            socials: [
+                {
+                    name: "Google",
+                    icon: "fab fa-google",
+                    effect: "btn-go"
+                },
+                {
+                    name: "Facebook",
+                    icon: "fab fa-facebook",
+                    effect: "btn-fb"
+                },
+                {
+                    name: "Linked In",
+                    icon: "fab fa-linkedin",
+                    effect: "btn-li"
+                },
+                {
+                    name: "Twitter",
+                    icon: "fab fa-twitter",
+                    effect: "btn-tw"
                 }
             ],
 	        copyright: "&copy; iWantRent 2018"

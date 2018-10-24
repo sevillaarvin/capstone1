@@ -3,8 +3,8 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#app-nav-content" @click.prevent>
             <span class="navbar-toggler-icon"></span>
         </button>
-        <router-link :to="{name: 'Landing'}">
-            <a class="navbar-brand mx-auto" href="#">
+        <router-link class="mx-auto" :to="{name: 'Landing'}">
+            <a class="navbar-brand" href="#">
                 <img class="logo rounded-circle d-inline-block align-top" :src="logo" alt="" width="50" height="50">
             </a>
         </router-link>
