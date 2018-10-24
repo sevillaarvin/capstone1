@@ -1,10 +1,10 @@
 <template>
   <div id="app" class="d-flex flex-column">
     <app-nav :links="nav.navLinks" :logo="nav.logo"></app-nav>
-        <div class="container flex-grow-1 bg-custom-image shadow rounded-bottom">
+    <div class="container flex-grow-1 bg-custom-image shadow rounded-bottom">
 
-            <router-view class="" :appData="appData"></router-view>
-        </div>
+        <router-view class="" :appData="appData"></router-view>
+    </div>
     <app-footer :socials="footer.socials" :links="footer.footerLinks" :copyright="footer.copyright"></app-footer>
   </div>
 </template>
@@ -33,6 +33,13 @@ export default {
                     content: "This is feature 1",
                     longDescription: "This is feature 1. It has such and such feature. All of the features in feature 1 are feature 1. This is a very nice feature because feature 1.",
                     img: "src/assets/images/feature1.jpeg",
+                    properties: [
+                        "Property1",
+                        "Property2",
+                        "Property3",
+                        "Property4",
+                        "Property5"
+                    ],
                     read: "Read more"
                 },
                 {
@@ -40,6 +47,13 @@ export default {
                     content: "This is feature 2",
                     longDescription: "This is feature 2. It has such and such feature. All of the features in feature 2 are feature 2. This is a very nice feature because feature 2.",
                     img: "src/assets/images/feature2.jpeg",
+                    properties: [
+                        "Property1",
+                        "Property2",
+                        "Property3",
+                        "Property4",
+                        "Property5"
+                    ],
                     read: "Read more"
                 },
                 {
@@ -47,6 +61,13 @@ export default {
                     content: "This is feature 3",
                     longDescription: "This is feature 3. It has such and such feature. All of the features in feature 3 are feature 3. This is a very nice feature because feature 3.",
                     img: "src/assets/images/feature3.jpeg",
+                    properties: [
+                        "Property1",
+                        "Property2",
+                        "Property3",
+                        "Property4",
+                        "Property5"
+                    ],
                     read: "Read more"
                 }
 

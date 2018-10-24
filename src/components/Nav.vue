@@ -32,13 +32,11 @@
         props: {
             links: Array,
             logo: String
+        },
+        methods: {
         }
     }
+
 </script>
-<style scoped>
-    /*
-    .logo {
-        background-color: #fffc31;
-    }
-    */
+<style>
 </style>

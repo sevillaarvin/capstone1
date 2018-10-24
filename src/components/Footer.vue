@@ -2,7 +2,7 @@
     <footer class="row bg-transparent">
         <ul class="col-12 p-3 nav justify-content-center">
             <li class="nav-item" v-for="social in socials">
-                <a class="nav-link btn shadow rounded-circle mx-3" :class="social.effect" href="">
+                <a class="nav-link shadow rounded-circle mx-3" :class="social.effect" href="">
                     <i :class="social.icon" class="text-light"></i>
                 </a>
             </li>
