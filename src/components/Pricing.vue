@@ -1,8 +1,10 @@
 <template>
-    <div class="flex-grow-1">
-        <h1 class="text-center my-3">Pricing</h1>
-        <div class="d-flex flex-column flex-md-row align-items-center align-items-md-baseline justify-content-around">
-            <div class="card text-center" v-for="price in prices">
+    <div class="row flex-grow-1">
+        <header class="col-12">
+            <h1 class="text-center my-3">Pricing</h1>
+        </header>
+        <div class="col-12 d-flex flex-column flex-md-row align-items-center align-items-md-baseline justify-content-around">
+            <div class="card text-center my-3" v-for="price in prices">
                 <div class="card-body">
                     <h2 class="card-title">{{ price.price }}</h2>
                     <h2 class="card-subtitle">{{ price.title }}</h2>
