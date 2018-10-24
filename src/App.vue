@@ -171,7 +171,7 @@ export default {
                 },
                 {
                     link: "#",
-                    name: "Help",
+                    name: "Contact",
                     description: "Help"
                 }
             ],
