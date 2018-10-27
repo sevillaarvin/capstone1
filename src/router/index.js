@@ -64,8 +64,13 @@ export default new VueRouter({
             component: Privacy
         },
         {
-            path: "*",
+            path: "/notfound",
+            name: "PageNotFound",
             component: PageNotFound
+        },
+        {
+            path: "*",
+            redirect: {name: "PageNotFound"}
         }
     ]
 })

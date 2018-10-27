@@ -13,11 +13,11 @@
         </div>
 
         <div class="row" slot="content">
-            <main class="col-12 jumbotron jumbotron-fluid">
+            <main class="col-12 jumbotron jumbotron-fluid bg-transparent">
                 <div class="container text-center">
                     <h1 class="display-4">404 page not found</h1>
                     <p class="lead py-5">Oops, something went wrong</p>
-                    <img class="img-fluid rounded-top rounded-bottom shadow" :src="appData.notFound.img"/>
+                    <img class="img-not-found img-fluid rounded-top rounded-bottom shadow" :src="appData.notFound.img"/>
                 </div>
             </main>
         </div>
@@ -42,5 +42,8 @@
     }
 </script>
 <style scoped>
+    .img-not-found {
+        max-width: 350px;
+    }
 </style>
 
