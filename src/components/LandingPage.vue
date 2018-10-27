@@ -18,13 +18,13 @@
             </header>
         </div>
         <div class="col-12 mb-5" v-for="(feature, i) in appData.features.list">
-            <div class="row position-relative h-custom-half" :style="{backgroundImage: 'url(' + feature.img + ')'}">
+            <div class="row position-relative h-custom-half img-feature" :style="{backgroundImage: 'url(' + feature.img + ')'}">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
                     <polygon fill="#00BB77" points="0,100 100,0 100,100" v-if="i % 2 == 0"/>
                     <polygon fill="#E3D87E" points="0,100 0,0 100,100" v-else/>
                 </svg>
             </div>
-            <div class="row flex-column py-3 h-custom-quarter" :class="{'text-right': i % 2 == 0, 'bg-custom-primary': i % 2 == 0, 'bg-custom-other2': i % 2 == 1}">
+            <div class="row flex-column py-3 h-custom-quarter" :class="{'text-right': i % 2 == 0, 'bg-custom-primary': i % 2 == 0, 'text-light': i % 2 == 0,'bg-custom-other2': i % 2 == 1}">
                 <div class="px-5 py-2">
                     <span>{{ feature.content }}</span>
                 </div>
@@ -92,6 +92,12 @@
     .h-custom-quarter {
         min-height: 25vh;
         height: 25vh;
+    }
+
+    .img-feature {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
     
     svg {

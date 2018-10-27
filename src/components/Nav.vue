@@ -4,8 +4,11 @@
         <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
     
         <b-navbar-brand href="#" :to="{name: 'Landing'}">
-            <img class="logo rounded-circle border border-dark" :src="navData.logo" alt="logo">
+            <img class="img-logo rounded-circle border border-dark" :src="navData.logo" alt="logo">
         </b-navbar-brand>
+        <router-link :to="{name: 'Landing'}">
+            <span class="text-dark">Rentlify</span>
+        </router-link>
     
         <b-collapse is-nav id="nav_collapse">
             <b-navbar-nav class="ml-auto">
@@ -27,7 +30,8 @@
     }
 </script>
 <style scoped>
-    .logo {
+    .img-logo {
         min-height: 50px;
+        max-height: 50px;
     }
 </style>

@@ -2,6 +2,7 @@
     <div class="row">
         <div class="col-12 mb-0 pb-0 jumbotron d-flex flex-column justify-content-center" :style="{backgroundImage: 'url(' + homeData.img + ')'}">
             <div class="row">
+                <img class="col img-fluid img-logo" :src="homeData.logo">
                 <div class="col-12 text-center">
                     <h1 class="display-4">{{ homeData.title }}</h1>
                     <p class="lead"> {{ homeData.content }}</p>
@@ -26,5 +27,9 @@
         background-repeat: no-repeat;
         background-position: center;
         background-attachment: fixed;
+    }
+
+    .img-logo {
+        max-height: 250px;
     }
 </style>

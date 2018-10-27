@@ -53,7 +53,7 @@
                             variant: "outline-primary"
                         }
                     ],
-                    logo: "src/assets/images/logo3.svg"
+                    logo: require("./assets/images/logo3.svg")
                 },
                 appData: {
                     home: {
@@ -62,7 +62,8 @@
         	        	details: "AI driven platform to find your optimal home.",
                         callToAction: "Rent now",
                         secondaryAction: "Sign up",
-                        img: "src/assets/images/bg4.jpeg"
+                        img: require("./assets/images/bg4.jpeg"),
+                        logo: require("./assets/images/logo3.svg")
                     },
                     features: {
                         list: [
@@ -70,7 +71,7 @@
                                 title: "Feature1",
                                 content: "This is feature 1. This is its summary.",
                                 longDescription: "This is feature 1. It has such and such feature. All of the features in feature 1 are feature 1. This is a very nice feature because feature 1.",
-                                img: "src/assets/images/feature1.jpeg",
+                                img: require("./assets/images/feature1.jpeg"),
                                 properties: [
                                     "Property1",
                                     "Property2",
@@ -84,7 +85,7 @@
                                 title: "Feature2",
                                 content: "This is feature 2. This is its summary.",
                                 longDescription: "This is feature 2. It has such and such feature. All of the features in feature 2 are feature 2. This is a very nice feature because feature 2.",
-                                img: "src/assets/images/feature2.jpeg",
+                                img: require("./assets/images/feature2.jpeg"),
                                 properties: [
                                     "Property1",
                                     "Property2",
@@ -98,7 +99,7 @@
                                 title: "Feature3",
                                 content: "This is feature 3. This is its summary.",
                                 longDescription: "This is feature 3. It has such and such feature. All of the features in feature 3 are feature 3. This is a very nice feature because feature 3.",
-                                img: "src/assets/images/feature3.jpeg",
+                                img: require("./assets/images/feature3.jpeg"),
                                 properties: [
                                     "Property1",
                                     "Property2",
@@ -321,17 +322,17 @@
                             {
                                 name: "Person1",
                                 details: "This is person 1. He is a person. He is a such and such person with such and such background.",
-                                img: "src/assets/images/person.jpeg"
+                                img: require("./assets/images/person.jpeg")
                             },
                             {
                                 name: "Person2",
                                 details: "This is person 2. He is a person. He is a such and such person with such and such background.",
-                                img: "src/assets/images/person.jpeg"
+                                img: require("./assets/images/person.jpeg")
                             },
                             {
                                 name: "Person3",
                                 details: "This is person 3. He is a person. He is a such and such person with such and such background.",
-                                img: "src/assets/images/person.jpeg"
+                                img: require("./assets/images/person.jpeg")
                             }
                         ],
                         purpose: "Our company exists to empower people through artificial intelligence.",
@@ -390,7 +391,7 @@
                     ],
                     others: [
                         'Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>',
-                        "&copy; iWantRent 2018"
+                        "&copy; Rentlify 2018"
                     ]
                 }
             }
