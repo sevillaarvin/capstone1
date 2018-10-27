@@ -1,0 +1,116 @@
+<template>
+    <div class="row bg-transparent">
+        <!-- TODO: Remove bg -->
+        <div class="col-12 bg-danger">
+            <app-home class="py-3 h-custom-full" :homeData="appData.home">
+                <slot name="search" slot="search"></slot>
+            </app-home>
+        </div>
+
+        <!-- TODO: Remove bg -->
+        <div class="col-12 bg-light sticky-top">
+            <slot name="nav"></slot>
+        </div>
+
+        <!-- TODO: Remove bg -->
+        <div class="col-12 bg-success">
+            <header class="row">
+                <div class="col-12">
+                    <h1 class="text-center py-5">Are you ready for the Revolution?</h1>
+                </div>
+            </header>
+        </div>
+        <div class="col-12 bg-primary" v-for="(feature, i) in appData.features.list">
+            <div class="row position-relative h-custom-half" :style="{backgroundImage: 'url(' + feature.img + ')'}">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <polygon fill="white" points="0,100 100,0 100,100" v-if="i % 2 == 0"/>
+                    <polygon fill="white" points="0,100 0,0 100,100" v-else/>
+                </svg>
+            </div>
+            <!-- TODO: Remove bg and border -->
+            <div class="row flex-column py-3 bg-white h-custom-quarter border border-dark" :class="{'text-right': i % 2 == 0}">
+                <div class="px-5 py-2">
+                    <span>{{ feature.content }}</span>
+                </div>
+                <div class="px-5 py-2">
+                    <button class="btn btn-primary">Test</button>
+                </div>
+            </div>
+
+                <!--
+                <img class="img-fluid" :src="feature.img">
+            <div class="row position-relative h-custom-half">
+                <header>
+                    <div class="bg-header"></div>
+                    <h1>{{ feature.title }}</h1>
+                </header>
+                <section>
+                    <h1>{{ feature.content }}</h1>
+                </section>
+            <div class="text-primary">Test</div>
+                -->
+        </div>
+
+        <!-- TODO: Remove bg -->
+        <div class="col-12 bg-success">
+            <header class="row">
+                <div class="col-12">
+                    <h1 class="text-center py-5">The Team</h1>
+                </div>
+            </header>
+            <app-about class="py-3 bg-dark rounded-bottom" :aboutData="appData.about"></app-about>
+        </div>
+        <div class="col-12">
+            <header class="row">
+                <div class="col-12">
+                    <h1 class="text-center py-5">Contact Us</h1>
+                </div>
+            </header>
+            <app-contact :contactData="appData.contact"></app-contact>
+        </div>
+        <div class="col-12">
+            <slot name="footer"></slot>
+        </div>
+    </div>
+</template>
+<script>
+    import Home from './Home.vue'
+    import Features from './Features.vue'
+    import About from './About.vue'
+    import Contact from './Contact.vue'
+    
+    export default {
+      name: 'app',
+      props: {
+        appData: Object
+      },
+      components: {
+        appHome: Home,
+        appFeatures: Features,
+        appAbout: About,
+        appContact: Contact
+      }
+    }
+</script>
+<style scoped>
+    .h-custom-full {
+        min-height: 100vh;
+    }
+
+    .h-custom-half {
+        min-height: 50vh;
+        height: 50vh;
+    }
+
+    .h-custom-quarter {
+        min-height: 25vh;
+        height: 25vh;
+    }
+    
+    svg {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 32.5%;
+    }
+</style>

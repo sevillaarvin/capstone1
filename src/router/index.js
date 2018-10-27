@@ -1,11 +1,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import Landing from '../components/Landing.vue'
-import Features from '../components/FeaturesMain.vue'
-import Pricing from '../components/Pricing.vue'
-import About from '../components/AboutMain.vue'
-import Contact from '../components/Contact.vue'
+import Landing from '../components/LandingPage.vue'
+import Features from '../components/FeaturesPage.vue'
+import Pricing from '../components/PricingPage.vue'
+import About from '../components/AboutPage.vue'
+import Contact from '../components/ContactPage.vue'
+import FAQ from '../components/FAQPage.vue'
 import Terms from '../components/Terms.vue'
 import Privacy from '../components/Privacy.vue'
 
@@ -38,6 +39,10 @@ export default new VueRouter({
             path: "/contact",
             name: "Contact",
             component: Contact
+        },
+        {
+            path: "/faq",
+            redirect: {name: "Pricing"}
         },
         {
             path: "/terms",

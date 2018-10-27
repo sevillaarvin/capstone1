@@ -1,28 +1,33 @@
 <template>
-    <footer class="row bg-transparent">
-        <ul class="col-12 p-3 nav justify-content-center">
-            <li class="nav-item" v-for="social in socials">
-                <a class="nav-link shadow rounded-circle mx-3" :class="social.effect" href="">
-                    <i :class="social.icon" class="text-light"></i>
-                </a>
-            </li>
-        </ul>
-        <ul class="col-12 nav justify-content-center">
-            <li class="nav-item" v-for="link in links">
-                <router-link :to="link.name">
-                    <a class="nav-link">{{ link.description }}</a>
-                </router-link>
-            </li>
-            <span class="d-flex align-items-center " v-html="copyright"></span>
-        </ul>
+    <footer class="row">
+        <section class="col-12 col-md-6">
+            <ul class="p-3 nav justify-content-center">
+                <li class="nav-item" v-for="social in footerData.socials">
+                    <a class="nav-link shadow rounded-circle mx-3 my-3 my-md-0" :class="social.effect" :href="social.link" target="_blank">
+                        <i :class="social.icon" class="text-light"></i>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="col-12 col-md-6">
+            <ul class="nav justify-content-center">
+                <li class="nav-item" v-for="link in footerData.links">
+                    <router-link :to="link.name">
+                        <a class="nav-link">{{ link.description }}</a>
+                    </router-link>
+                </li>
+            </ul>
+            <div class="text-center">
+                <span v-html="footerData.copyright"></span>
+            </div>
+        </section>
     </footer>
 </template>
 <script>
     export default {
         props: {
-            links: Array,
-            socials: Array,
-            copyright: String
+            footerData: Object
         }
     }
 </script>

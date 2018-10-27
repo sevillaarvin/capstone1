@@ -1,8 +1,13 @@
 <template>
-    <div class="row">
-        <div class="col-12 d-flex flex-column flex-lg-row">
-            <div class="card text-center m-3" v-for="person in persons">
-                <img class="card-img-top rounded-circle p-3" :src="person.img">
+    <div class="row px-5">
+        <div class="col-12 col-md my-3 mx-md-3 text-center" v-for="person in aboutData.team">
+            <div class="card">
+            
+                <div class="p-3 border border-primary d-flex justify-content-center">
+                    <!-- TODO: Remove border -->
+                    <img class="square-custom img-fluid img-thumbnail rounded-circle d-block" :style="{backgroundImage: 'url(' + person.img + ')', backgroundSize: 'cover', backgroundPosition: 'center'}">
+                </div>
+
                 <div class="card-body">
                     <h1 class="card-title">{{ person.name }}</h1>
                     <p class="card-text">{{ person.details }}</p>
@@ -14,9 +19,13 @@
 <script>
     export default {
         props: {
-            persons: Array
+            aboutData: Object
         }
     }
 </script>
 <style scoped>
+    .square-custom {
+        min-width: 150px;
+        min-height: 150px;
+    }    
 </style>
