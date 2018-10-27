@@ -41,7 +41,7 @@
                 </div>
             </header>
         </div>
-        <div class="col-12 bg-custom-secondary mb-5">
+        <div class="col-12 bg-custom-other2 mb-5">
             <app-about class="py-3 rounded-bottom" :aboutData="appData.about"></app-about>
         </div>
 

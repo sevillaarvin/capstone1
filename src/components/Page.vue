@@ -6,8 +6,7 @@
         <div class="col-12">
             <slot name="search"></slot>
         </div>
-        <!-- TODO: remove bg -->
-        <div class="col-12 flex-grow-1 bg-light">
+        <div class="col-12 flex-grow-1">
             <slot name="content"></slot>
         </div>
         <div class="col-12">

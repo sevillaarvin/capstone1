@@ -110,7 +110,10 @@
                             }
                         ],
                         description: "Sometimes when you innovate, you make mistakes. It is best to admit them quickly, and get on with improving your other innovations.",
-                        attribution: "Steve Jobs"
+                        attribution: "Steve Jobs",
+                        callToAction: "Want to change your life?",
+                        actionBtn: "Learn more",
+                        actionPage: "Pricing"
                     },
                     pricing: {
                         prices: [
@@ -125,7 +128,8 @@
                                 ],
 		                        price: "FREE",
 		                        action: "Sign-up",
-		                        buttonType: "btn-outline-secondary"
+		                        buttonType: "btn-outline-secondary",
+                                link: "Register"
                             },
                             {
                                 title: "Tier2",
@@ -139,7 +143,8 @@
                                 ],
 		                        price: "PHP 100.00 / mo",
 		                        action: "Purchase",
-		                        buttonType: "btn-primary"
+		                        buttonType: "btn-primary shadow",
+                                link: "Register"
                             },
                             {
                                 title: "Tier3",
@@ -154,7 +159,8 @@
                                 ],
 		                        price: "PHP 1,000.00 / mo",
 		                        action: "Contact Us",
-		                        buttonType: "btn-success"
+		                        buttonType: "btn-success",
+                                link: "Contact"
                             }
                         ],
                         description: "I could either watch it happen or be a part of it.",
@@ -334,7 +340,8 @@
                         description: "As we look ahead into the next century, leaders will be those who empower others.",
                         attribution: "Bill Gates",
                         callToAction: "Are you ready to change the world?",
-                        actionBtn: "Join Our Team"
+                        actionBtn: "Join Our Team",
+                        actionPage: "Contact"
                     }
                 },
                 footerData: {
@@ -413,6 +420,10 @@
 
     .text-custom-secondary {
         color: #AAEE99;
+    }
+
+    .text-custom-tertiary {
+        color: #0b0a07;
     }
 
     .text-custom-other2 {

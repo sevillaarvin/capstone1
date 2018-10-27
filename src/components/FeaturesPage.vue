@@ -1,8 +1,16 @@
 <template>
     <app-page>
-        <slot name="nav" slot="nav"></slot>
+        <div class="row" slot="nav">
+            <div class="col-12">
+                <slot name="nav"></slot>
+            </div>
+        </div>
 
-        <slot name="search" slot="search"></slot>
+        <div class="row bg-custom-tertiary" slot="search">
+            <div class="col-12">
+                <slot name="search"></slot>
+            </div>
+        </div>
 
         <div class="row" slot="content">
             <header class="col-12 pt-5">
@@ -15,7 +23,7 @@
             <section class="col-12">
                 <div class="row">
                     <div class="col-12" v-for="(feature, i) in appData.features.list">
-                        <div class="row bg-light py-3">
+                        <div class="row  py-3" :class="{'bg-custom-primary': i % 2 == 1, 'text-light': i % 2 == 1}">
                             <div class="col-12 col-md-6" :class="{'order-md-1': i % 2 == 1}">
                                 <img class="img-fluid img-thumbnail" :src="feature.img">
                             </div>
@@ -24,7 +32,7 @@
                                 <hr class="my-3">
                                 <p class="">{{ feature.longDescription }}</p>
                                 <ul class="list-group">
-                                    <li class="list-group-item" v-for="property in feature.properties">
+                                    <li class="list-group-item bg-transparent border-left-0 border-right-0" :class="{'border-light': i % 2 == 1}" v-for="property in feature.properties">
                                         {{ property }}
                                     </li>
                                 </ul>
@@ -33,9 +41,19 @@
                     </div>
                 </div>
             </section>
+            <section class="col-12 my-5 pt-5 text-center">
+                <h2 class="text-center py-3">{{ appData.features.callToAction }}</h2>
+                <router-link :to="appData.features.actionPage">
+                    <button class="btn btn-primary">{{ appData.features.actionBtn }}</button>
+                </router-link>
+            </section>
         </div>
 
-        <slot name="footer" slot="footer"></slot>
+        <div class="row bg-custom-tertiary text-custom-other2" slot="footer">
+            <div class="col-12">
+                <slot name="footer"></slot>
+            </div>
+        </div>
     </app-page>
 </template>
 <script>

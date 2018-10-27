@@ -1,8 +1,16 @@
 <template>
     <app-page>
-        <slot name="nav" slot="nav"></slot>
+        <div class="row" slot="nav">
+            <div class="col-12">
+                <slot name="nav"></slot>
+            </div>
+        </div>
 
-        <slot name="search" slot="search"></slot>
+        <div class="row bg-custom-tertiary" slot="search">
+            <div class="col-12">
+                <slot name="search"></slot>
+            </div>
+        </div>
 
         <div class="row" slot="content">
             <header class="col-12 pt-5">
@@ -16,28 +24,15 @@
             <nav class="col-12 col-md-6 offset-md-3 py-3">
                 <b-nav tabs justified>
                     <b-nav-item :active="dept === currentDepartment" v-for="dept in appData.contact.nav" @click="changeDepartment(dept)">{{ dept }}</b-nav-item>
-                    <!--
-                    <b-nav-item>Link</b-nav-item>
-                    <b-nav-item>Another Link</b-nav-item>
-                    <b-nav-item disabled>Disabled</b-nav-item>
-                    -->
                 </b-nav>
             </nav>
             
-            <!-- TODO: remove border -->
-            <section class="col-12 col-md-8 offset-md-2 border border-primary">
+            <section class="col-12 col-md-8 offset-md-2">
                 <app-department :deptData="currentDeptData"></app-department>
-                <!--
-                <component :is="selectedComponent" :contactData="appData.contact"></component>
-                -->
             </section>
 
-            <!--
-            <main-phone-number>
-            -->
-            <!-- TODO: remove border -->
-            <section class="col-12 text-center border border-danger">
-                <header class="py-3">
+            <section class="col-12 py-3 text-center bg-custom-primary text-light">
+                <header class="pb-3">
                     <h2 class="my-3">Main Phone Numbers</h2>
                 </header>
                 <section> 
@@ -47,11 +42,7 @@
                 </section>
             </section>
 
-            <!--
-            <company-address>
-            -->
-            <!-- TODO: remove border -->
-            <section class="col-12 border border-danger">
+            <section class="col-12">
                 <header class="py-3">
                     <h2 class="text-center my-3">Company Address</h2>
                 </header>
@@ -66,37 +57,13 @@
                 </div>
             </section>
 
-            <!--
-            <div class="col-12">
-                <app-contact :contactData="appData.contact"></app-contact>
-            </div>
-
-            <div class="col-12">
-                <div class="row">
-                    <div class="col-12" v-for="feature in features">
-                        <div class="row bg-light py-3">
-                            <div class="col-12 col-md-4 offset-md-2">
-                                <img class="img-fluid img-thumbnail" :src="feature.img">
-                            </div>
-                            <div class="col-12 col-md-6">
-                                <h2 class="">{{ feature.title }}</h2>
-                                <hr class="my-3">
-                                <p class="">{{ feature.longDescription }}</p>
-                                <ul class="list-group">
-                                    <li class="list-group-item" v-for="property in feature.properties">
-                                        {{ property }}
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <hr class="mb-3">
-                    </div>
-                </div>
-            </div>
-            -->
         </div>
 
-        <slot name="footer" slot="footer"></slot>
+        <div class="row bg-custom-tertiary text-custom-other2" slot="footer">
+            <div class="col-12">
+                <slot name="footer"></slot>
+            </div>
+        </div>
     </app-page>
 </template>
 <script>
@@ -141,6 +108,5 @@
         }
     }
 </script>
-<style scoped>
+<style>
 </style>
-

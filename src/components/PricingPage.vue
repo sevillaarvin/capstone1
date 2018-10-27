@@ -1,8 +1,16 @@
 <template>
     <app-page>
-        <slot name="nav" slot="nav"></slot>
+        <div class="row" slot="nav">
+            <div class="col-12">
+                <slot name="nav"></slot>
+            </div>
+        </div>
 
-        <slot name="search" slot="search"></slot>
+        <div class="row bg-custom-tertiary" slot="search">
+            <div class="col-12">
+                <slot name="search"></slot>
+            </div>
+        </div>
 
         <div class="row" slot="content">
             <header class="col-12 pt-5">
@@ -30,17 +38,23 @@
                                 </ul>
                             </div>
                             <div class="py-3">
-                                <a class="card-link btn" :class="price.buttonType" href="#">{{ price.action }}</a>
+                                <router-link :to="price.link">
+                                    <a class="card-link btn" :class="price.buttonType" href="#">{{ price.action }}</a>
+                                </router-link>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section id="#faq" class="col-12">
+            <section id="#faq" class="col-12 mt-5 pb-5 bg-custom-primary text-light">
                 <app-faq :faqData="appData.faq"></app-faq>
             </section>
         </div>
-        <slot name="footer" slot="footer"></slot>
+        <div class="row bg-custom-tertiary text-custom-other2" slot="footer">
+            <div class="col-12">
+                <slot name="footer"></slot>
+            </div>
+        </div>
     </app-page>
 </template>
 <script>
@@ -57,8 +71,5 @@
         }
     }
 </script>
-<style scoped>
-    .card-price {
-        min-width: 30vw;
-    }
+<style>
 </style>

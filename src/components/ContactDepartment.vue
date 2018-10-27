@@ -6,7 +6,7 @@
         </header>
         <main class="col-12">
             <b-card-group columns>
-                <b-card v-for="team in deptData.list" :header="team.name" border-variant="primary" header-bg-variant="primary" align="center">
+                <b-card v-for="team in deptData.list" :header="team.name" border-variant="primary" header-bg-variant="primary" header-text-variant="white" align="center">
                     <p class="card-text">{{ team.phone }}</p>
                 </b-card>
             </b-card-group>
