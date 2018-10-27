@@ -343,6 +343,9 @@
                         callToAction: "Are you ready to change the world?",
                         actionBtn: "Join Our Team",
                         actionPage: "Contact"
+                    },
+                    notFound: {
+                        img: require("./assets/images/404.jpeg")
                     }
                 },
                 footerData: {
