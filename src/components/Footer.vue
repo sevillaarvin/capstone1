@@ -1,7 +1,7 @@
 <template>
     <footer class="row">
         <section class="col-12 col-md-6">
-            <ul class="p-3 nav justify-content-center">
+            <ul class="p-0 p-md-3 nav justify-content-center">
                 <li class="nav-item" v-for="social in footerData.socials">
                     <a class="nav-link shadow rounded-circle mx-3 my-3 my-md-0" :class="social.effect" :href="social.link" target="_blank">
                         <i :class="social.icon" class="text-light"></i>

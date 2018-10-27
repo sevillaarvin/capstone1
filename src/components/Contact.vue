@@ -12,7 +12,7 @@
             <button class="btn btn-primary" type="submit">Send</button>
         </form>
         <aside class="col-12 col-md-6">
-            <div class="p-1">
+            <div class="p-1 text-center text-md-left">
                 <p><strong>{{ contactData.details.name }}</strong></p>
                 <p>{{ contactData.details.email }}</p>
                 <p>{{ contactData.details.phone1 }}</p>

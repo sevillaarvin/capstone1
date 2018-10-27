@@ -2,9 +2,9 @@
     <div class="row">
         <div class="col-12 p-5">
             <div class="row">
-                <div class="col-6 offset-3">
+                <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
                     <div class="input-group">
-                        <input class="form-control" type="text" placeholder="Find a place where you belong...">
+                        <input class="form-control" type="text" placeholder="Find your dream home...">
                         <div class="input-group-append">
                             <span class="input-group-text"><i class="fas fa-search"></i></span>
                         </div>

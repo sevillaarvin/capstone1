@@ -223,7 +223,94 @@
                             "Sales",
                             "Technical Support",
                             "Account Management"
-                        ]
+                        ],
+                        sales: {
+                            name: "Sales",
+                            list: [
+                                {
+                                    name: "General Sales",
+                                    phone: "02 123-4567"
+                                },
+                                {
+                                    name: "Enterprise Sales",
+                                    phone: "02 123-4567"
+                                },
+                                {
+                                    name: "Enterprise Sales",
+                                    phone: "02 123-4567"
+                                },
+                                {
+                                    name: "Enterprise Sales",
+                                    phone: "02 123-4567"
+                                },
+                                {
+                                    name: "Enterprise Sales",
+                                    phone: "02 123-4567"
+                                },
+                                {
+                                    name: "Enterprise Sales",
+                                    phone: "02 123-4567"
+                                },
+                            ]
+                        },
+                        technical: {
+                            name: "Technical Support",
+                            list: [
+                                {
+                                    name: "General Sales",
+                                    phone: "02 123-4567"
+                                },
+                                {
+                                    name: "Enterprise Sales",
+                                    phone: "02 123-4567"
+                                },
+                                {
+                                    name: "Enterprise Sales",
+                                    phone: "02 123-4567"
+                                },
+                                {
+                                    name: "Enterprise Sales",
+                                    phone: "02 123-4567"
+                                },
+                                {
+                                    name: "Enterprise Sales",
+                                    phone: "02 123-4567"
+                                },
+                                {
+                                    name: "Enterprise Sales",
+                                    phone: "02 123-4567"
+                                },
+                            ]
+                        },
+                        account: {
+                            name: "Account Management",
+                            list: [
+                                {
+                                    name: "General Sales",
+                                    phone: "02 123-4567"
+                                },
+                                {
+                                    name: "Enterprise Sales",
+                                    phone: "02 123-4567"
+                                },
+                                {
+                                    name: "Enterprise Sales",
+                                    phone: "02 123-4567"
+                                },
+                                {
+                                    name: "Enterprise Sales",
+                                    phone: "02 123-4567"
+                                },
+                                {
+                                    name: "Enterprise Sales",
+                                    phone: "02 123-4567"
+                                },
+                                {
+                                    name: "Account Sales",
+                                    phone: "02 123-4567"
+                                },
+                            ]
+                        }
                     },
                     about: {
                         team: [
@@ -265,7 +352,7 @@
                             description: "Privacy Policy"
                         },
                         {
-                            link: "#",
+                            link: "#faq",
                             name: "FAQ",
                             description: "Help"
                         }
@@ -310,8 +397,4 @@
 </script>
 
 <style scoped>
-    /* TODO: modify bg dark appropriately */
-    .bg-dark {
-        height: 100vh;
-    }
 </style>

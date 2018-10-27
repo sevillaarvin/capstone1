@@ -3,7 +3,7 @@
     
         <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
     
-        <b-navbar-brand href="#">
+        <b-navbar-brand href="#" :to="{name: 'Landing'}">
             <img class="logo rounded-circle border border-dark" :src="navData.logo" alt="logo">
         </b-navbar-brand>
     

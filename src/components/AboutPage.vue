@@ -8,7 +8,7 @@
 
         <div class="row" slot="content">
             <!--
-            <header class="col-12 py-5">
+            <header class="col-12 pt-5">
             	<h1 class="text-center my-3">Who We Are</h1>
             </header>
             <main class="col-12 pb-3 text-center">

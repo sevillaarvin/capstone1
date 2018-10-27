@@ -7,13 +7,22 @@ import Pricing from '../components/PricingPage.vue'
 import About from '../components/AboutPage.vue'
 import Contact from '../components/ContactPage.vue'
 import FAQ from '../components/FAQPage.vue'
-import Terms from '../components/Terms.vue'
-import Privacy from '../components/Privacy.vue'
+import Terms from '../components/TermsPage.vue'
+import Privacy from '../components/PrivacyPage.vue'
+import PageNotFound from '../components/PageNotFound.vue'
 
 Vue.use(VueRouter)
 
 export default new VueRouter({
     mode: "history",
+    scrollBehavior(to, from, savedPosition) {
+        if (to.hash) {
+            return {
+                selector: to.hash
+            }
+        }
+        return {x: 0, y: 0}
+    },
     routes: [
         {
             path: "/",
@@ -42,7 +51,8 @@ export default new VueRouter({
         },
         {
             path: "/faq",
-            redirect: {name: "Pricing"}
+            name: "FAQ",
+            redirect: {name: "Pricing", hash: "#faq"}
         },
         {
             path: "/terms",
@@ -53,6 +63,10 @@ export default new VueRouter({
             path: "/privacy",
             name: "Privacy",
             component: Privacy
+        },
+        {
+            path: "*",
+            component: PageNotFound
         }
     ]
 })

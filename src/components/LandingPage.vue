@@ -60,10 +60,11 @@
             </header>
             <app-about class="py-3 bg-dark rounded-bottom" :aboutData="appData.about"></app-about>
         </div>
-        <div class="col-12">
+        <!-- TODO: Remove bg -->
+        <div class="col-12 bg-info">
             <header class="row">
                 <div class="col-12">
-                    <h1 class="text-center py-5">Contact Us</h1>
+                    <h1 class="text-center py-5">Get In Touch</h1>
                 </div>
             </header>
             <app-contact :contactData="appData.contact"></app-contact>

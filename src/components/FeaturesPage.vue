@@ -5,7 +5,7 @@
         <slot name="search" slot="search"></slot>
 
         <div class="row" slot="content">
-            <header class="col-12 py-5">
+            <header class="col-12 pt-5">
             	<h1 class="text-center my-3">Features</h1>
             </header>
             <main class="col-12 pb-3 text-center">
@@ -16,10 +16,10 @@
                 <div class="row">
                     <div class="col-12" v-for="(feature, i) in appData.features.list">
                         <div class="row bg-light py-3">
-                            <div class="col-12 col-md-6" :class="{'order-1': i % 2 == 1}">
+                            <div class="col-12 col-md-6" :class="{'order-md-1': i % 2 == 1}">
                                 <img class="img-fluid img-thumbnail" :src="feature.img">
                             </div>
-                            <div class="col-12 col-md-6">
+                            <div class="col-12 col-md-6 text-center text-md-left">
                                 <h2 class="">{{ feature.title }}</h2>
                                 <hr class="my-3">
                                 <p class="">{{ feature.longDescription }}</p>
