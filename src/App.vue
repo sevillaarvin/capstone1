@@ -1,12 +1,10 @@
 <template>
     <div>
-        <div class="container-fluid mx-0 bg-dark">
+        <div class="container-fluid mx-0">
             <router-view :appData="appData">
-                <!-- TODO: remove border background -->
-                <app-nav slot="nav" class="border border-danger navbar-dark bg-info" :navData="navData"></app-nav>
+                <app-nav slot="nav" :navData="navData"></app-nav>
                 <app-search slot="search" class="bg-transparent"></app-search>
-                <!-- TODO: remove border background -->
-                <app-footer slot="footer" class="border border-danger bg-warning" :footerData="footerData"></app-footer>
+                <app-footer slot="footer" :footerData="footerData"></app-footer>
             </router-view>
         </div>
     </div>
@@ -55,7 +53,7 @@
                             variant: "outline-primary"
                         }
                     ],
-                    logo: "src/assets/images/logo2.png"
+                    logo: "src/assets/images/logo3.svg"
                 },
                 appData: {
                     home: {
@@ -64,7 +62,7 @@
         	        	details: "AI driven platform to find your optimal home.",
                         callToAction: "Rent now",
                         secondaryAction: "Sign up",
-                        img: "src/assets/images/construction.jpeg"
+                        img: "src/assets/images/bg4.jpeg"
                     },
                     features: {
                         list: [
@@ -383,7 +381,10 @@
                             link: "https://www.twitter.com"
                         }
                     ],
-                    copyright: "&copy; iWantRent 2018"
+                    others: [
+                        'Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>',
+                        "&copy; iWantRent 2018"
+                    ]
                 }
             }
         },
@@ -396,5 +397,46 @@
     }
 </script>
 
-<style scoped>
+<style>
+    body {
+        font-family: 'Niramit', sans-serif;
+        color: #0b0a07;
+        /*
+        background-color: #00BB77;
+        background-color: #AAEE99;
+        */
+    }
+
+    .text-custom-primary {
+        color: #00BB77;
+    }
+
+    .text-custom-secondary {
+        color: #AAEE99;
+    }
+
+    .text-custom-other2 {
+        color: #e3d87e;
+    }
+
+    .bg-custom-primary {
+        background-color: #00BB77;
+    }
+
+    .bg-custom-tertiary {
+        background-color: #0B0A07;
+    }
+
+    .bg-custom-secondary {
+        background-color: #AAEE99;
+    }
+
+    .bg-custom-other {
+        background-color: #bbcea8;
+    }
+
+    .bg-custom-other2 {
+        background-color: #e3d87e;
+    }
+
 </style>

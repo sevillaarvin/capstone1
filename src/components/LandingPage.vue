@@ -1,34 +1,30 @@
 <template>
     <div class="row bg-transparent">
-        <!-- TODO: Remove bg -->
-        <div class="col-12 bg-danger">
-            <app-home class="py-3 h-custom-full" :homeData="appData.home">
+        <div class="col-12">
+            <app-home class="h-custom-full" :homeData="appData.home">
                 <slot name="search" slot="search"></slot>
             </app-home>
         </div>
 
-        <!-- TODO: Remove bg -->
-        <div class="col-12 bg-light sticky-top">
+        <div class="col-12 sticky-top">
             <slot name="nav"></slot>
         </div>
 
-        <!-- TODO: Remove bg -->
-        <div class="col-12 bg-success">
+        <div class="col-12 border-top border-dark">
             <header class="row">
                 <div class="col-12">
                     <h1 class="text-center py-5">Are you ready for the Revolution?</h1>
                 </div>
             </header>
         </div>
-        <div class="col-12 bg-primary" v-for="(feature, i) in appData.features.list">
+        <div class="col-12 mb-5" v-for="(feature, i) in appData.features.list">
             <div class="row position-relative h-custom-half" :style="{backgroundImage: 'url(' + feature.img + ')'}">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
-                    <polygon fill="white" points="0,100 100,0 100,100" v-if="i % 2 == 0"/>
-                    <polygon fill="white" points="0,100 0,0 100,100" v-else/>
+                    <polygon fill="#00BB77" points="0,100 100,0 100,100" v-if="i % 2 == 0"/>
+                    <polygon fill="#E3D87E" points="0,100 0,0 100,100" v-else/>
                 </svg>
             </div>
-            <!-- TODO: Remove bg and border -->
-            <div class="row flex-column py-3 bg-white h-custom-quarter border border-dark" :class="{'text-right': i % 2 == 0}">
+            <div class="row flex-column py-3 h-custom-quarter" :class="{'text-right': i % 2 == 0, 'bg-custom-primary': i % 2 == 0, 'bg-custom-other2': i % 2 == 1}">
                 <div class="px-5 py-2">
                     <span>{{ feature.content }}</span>
                 </div>
@@ -36,40 +32,30 @@
                     <button class="btn btn-primary">Test</button>
                 </div>
             </div>
-
-                <!--
-                <img class="img-fluid" :src="feature.img">
-            <div class="row position-relative h-custom-half">
-                <header>
-                    <div class="bg-header"></div>
-                    <h1>{{ feature.title }}</h1>
-                </header>
-                <section>
-                    <h1>{{ feature.content }}</h1>
-                </section>
-            <div class="text-primary">Test</div>
-                -->
         </div>
 
-        <!-- TODO: Remove bg -->
-        <div class="col-12 bg-success">
+        <div class="col-12 border-top border-dark">
             <header class="row">
                 <div class="col-12">
                     <h1 class="text-center py-5">The Team</h1>
                 </div>
             </header>
-            <app-about class="py-3 bg-dark rounded-bottom" :aboutData="appData.about"></app-about>
         </div>
-        <!-- TODO: Remove bg -->
-        <div class="col-12 bg-info">
+        <div class="col-12 bg-custom-secondary mb-5">
+            <app-about class="py-3 rounded-bottom" :aboutData="appData.about"></app-about>
+        </div>
+
+        <div class="col-12 border-top border-dark">
             <header class="row">
                 <div class="col-12">
                     <h1 class="text-center py-5">Get In Touch</h1>
                 </div>
             </header>
-            <app-contact :contactData="appData.contact"></app-contact>
         </div>
         <div class="col-12">
+            <app-contact :contactData="appData.contact"></app-contact>
+        </div>
+        <div class="col-12 bg-custom-tertiary text-custom-other2">
             <slot name="footer"></slot>
         </div>
     </div>

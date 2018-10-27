@@ -14,12 +14,12 @@
             <ul class="nav justify-content-center">
                 <li class="nav-item" v-for="link in footerData.links">
                     <router-link :to="link.name">
-                        <a class="nav-link">{{ link.description }}</a>
+                        <a class="nav-link text-custom-primary" href="">{{ link.description }}</a>
                     </router-link>
                 </li>
             </ul>
-            <div class="text-center">
-                <span v-html="footerData.copyright"></span>
+            <div v-for="otherLink in footerData.others" class="text-center">
+                <span v-html="otherLink"></span>
             </div>
         </section>
     </footer>

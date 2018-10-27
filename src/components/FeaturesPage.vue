@@ -6,7 +6,7 @@
 
         <div class="row" slot="content">
             <header class="col-12 pt-5">
-            	<h1 class="text-center my-3">Features</h1>
+            	<h1 class="text-center my-3">How It Works</h1>
             </header>
             <main class="col-12 pb-3 text-center">
                 <p class="p-0 m-0 font-italic">{{ appData.features.description }}</p>
