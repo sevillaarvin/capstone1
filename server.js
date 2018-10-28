@@ -15,7 +15,7 @@ app.get("/api", (req, res) => {
         .catch(err => {
             try {
                 res.send(url + ": " + err.response.status + ", " + err.response.statusText + ", " + err.response.data)
-            } catch {
+            } catch (e) {
                 res.send(url + ": Something went wrong")
             }
         })
