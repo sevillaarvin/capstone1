@@ -6,7 +6,6 @@
   "private": true,
   "scripts": {
     "start": "node server.js",
-    "heroku-postbuild": "webpack -p",
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "startdev": "npm run dev",
     "build": "node build/build.js"
