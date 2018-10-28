@@ -14,6 +14,9 @@ export default new Vuex.Store({
             username: "",
             password: "",
             isLoggedIn: false
+        },
+        search: {
+            query: ""
         }
     },
     getters: {
@@ -34,7 +37,10 @@ export default new Vuex.Store({
         },
         getLoginPassword: (state) => {
             return state.login.password
-        }
+        },
+        getSearchQuery: (state) => {
+            return state.search.query
+        },
     },
     mutations: {
         setFullName: (state, payload) => {
@@ -54,6 +60,9 @@ export default new Vuex.Store({
         },
         setLoginPassword: (state, payload) => {
             state.login.username = payload
+        },
+        setSearchQuery: (state, payload) => {
+            state.search.query = payload
         }
     },
     actions: {
@@ -74,6 +83,9 @@ export default new Vuex.Store({
         },
         setLoginPassword: (context, payload) => {
             context.commit('setLoginPassword', payload)
+        },
+        setSearchQuery: (context, payload) => {
+            context.commit('setSearchQuery', payload)
         }
     }
 })

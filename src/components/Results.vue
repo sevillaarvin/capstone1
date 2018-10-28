@@ -12,9 +12,9 @@
             </div>
         </div>
 
-        <div class="img-custom-fixed row my-auto" slot="content">
+        <div class="row my-auto" slot="content">
             <header class="col-12">
-            	<h1 class="text-center">Dashboard</h1>
+            	<h1 class="text-center">Search</h1>
             </header>
             <main class="col-12 mt-5">
                 <h1 class="text-center">You have no properties listed.</h1>
@@ -29,6 +29,7 @@
     </app-page>
 </template>
 <script>
+    import { mapActions } from 'vuex'
     import Page from './Page.vue'
 
     export default {
@@ -37,6 +38,15 @@
         },
         components: {
             appPage: Page
+        },
+        methods: {
+            ...mapActions([
+                "setSearchQuery"
+            ])
+        },
+        beforeRouteLeave(to, from, next) {
+            this.setSearchQuery("")
+            next()
         }
     }
 </script>

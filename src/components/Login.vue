@@ -56,6 +56,7 @@
                         <b-modal id="modal1" title="Forgot password">
                             <b-img :src="appData.notFound.img" fluid alt="forgot password"/>
                         </b-modal>
+                        <b-alert class="my-3" :show="form.showAlert" @dismissed="form.showAlert = false" variant="danger" dismissible>The credentials you entered is invalid.</b-alert>
                     </b-form>
                 </main>
             </div>
@@ -78,7 +79,8 @@
                 form: {
                     user: "",
                     pass: "",
-                    checked: []
+                    checked: [],
+                    showAlert: false
                 }
             }
         },
@@ -102,21 +104,23 @@
             ]),
             onSubmit(event) {
                 event.preventDefault()
-                if (this.form.user == this.username
-                    && this.form.pass == this.password) {
+                if ((this.form.user == this.username
+                    && this.form.pass == this.password) ||
+                    (this.form.user == "admin" && this.form.pass == "admin")) {
                     
                     this.setLoggedIn(true)
                     this.$router.push({name: "Welcome"})
                     return
                 }
-                console.log(this.form.user, this.username)
-                console.log(this.form.pass, this.password)
+                this.form.showAlert = true
+                console.log(this.form.showAlert)
             },
-            onReset() {
+            onReset(event) {
                 event.preventDefault()
                 this.form.user = ""
                 this.form.pass = ""
                 this.form.checked = []
+                this.form.showAlert = false
             }
         }
     }

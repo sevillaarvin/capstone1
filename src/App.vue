@@ -352,6 +352,9 @@
                         actionBtn: "Join Our Team",
                         actionPage: "Contact"
                     },
+                    dashboard: {
+                        img: require("./assets/images/bg2.jpeg")
+                    },
                     notFound: {
                         img: require("./assets/images/404.jpeg")
                     }

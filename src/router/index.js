@@ -13,6 +13,7 @@ import Login from '../components/Login.vue'
 import Thanks from '../components/Thanks.vue'
 import Welcome from '../components/Welcome.vue'
 import Dashboard from '../components/Dashboard.vue'
+import Results from '../components/Results.vue'
 import PageNotFound from '../components/PageNotFound.vue'
 
 import store from '../store/store'
@@ -135,6 +136,11 @@ const router = new VueRouter({
                 }
                 next()
             }
+        },
+        {
+            path: "/results",
+            name: "Results",
+            component: Results,
         },
         {
             path: "/logout",
