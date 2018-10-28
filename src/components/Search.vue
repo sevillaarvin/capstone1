@@ -34,15 +34,9 @@
             ]),
             onSubmit(event) {
                 event.preventDefault()
-                this.setSearchQuery(this.search)
                 this.$router.push({name: "Results"})
             }
         },
-        beforeRouteLeave(to, from, next) {
-            console.log("test")
-            this.setSearchQuery("")
-            next()
-        }
     }
 </script>
 <style>
