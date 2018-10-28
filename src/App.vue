@@ -45,12 +45,20 @@
                         {
                             name: "Login",
                             description: "Sign in",
-                            variant: "primary"
+                            variant: "primary",
+                            view: false
                         },
                         {
                             name: "Register",
                             description: "Register",
-                            variant: "outline-primary"
+                            variant: "outline-primary",
+                            view: false
+                        },
+                        {
+                            name: "Logout",
+                            description: "Sign out",
+                            variant: "danger",
+                            view: true
                         }
                     ],
                     logo: require("./assets/images/logo3.svg")

@@ -117,12 +117,14 @@
         methods: {
             ...mapActions([
                 'setFullName',
-                'setUserName'
+                'setUserName',
+                'setPassword'
             ]),
             onSubmit(event) {
                 event.preventDefault()
                 this.setFullName(this.form.fullName)
                 this.setUserName(this.form.user)
+                this.setPassword(this.form.pass)
                 this.$router.push({name: "Thanks"})
             }
         }

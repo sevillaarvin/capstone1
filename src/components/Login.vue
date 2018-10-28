@@ -69,6 +69,7 @@
     </app-page>
 </template>
 <script>
+    import { mapGetters, mapActions } from 'vuex'
     import Page from './Page.vue'
 
     export default {
@@ -84,19 +85,41 @@
         props: {
             appData: Object
         },
+        computed: {
+            ...mapGetters({
+                username: "getUserName",
+                password: "getPassword"
+            })
+        },
         components: {
             appPage: Page
         },
         methods: {
-            onSubmit() {
-                this.$router.push({name: "Dashboard"})
+            ...mapActions([
+                "setLoggedIn",
+                "setLoginName",
+                "setLoginPassword"
+            ]),
+            onSubmit(event) {
+                event.preventDefault()
+                if (this.form.user == this.username
+                    && this.form.pass == this.password) {
+                    
+                    this.setLoggedIn(true)
+                    this.$router.push({name: "Welcome"})
+                    return
+                }
+                console.log(this.form.user, this.username)
+                console.log(this.form.pass, this.password)
             },
             onReset() {
-
+                event.preventDefault()
+                this.form.user = ""
+                this.form.pass = ""
+                this.form.checked = []
             }
         }
     }
 </script>
 <style>
 </style>
-

@@ -8,8 +8,7 @@
 
         <div class="row align-items-center border-top border-dark" slot="content">
             <header class="col-12 my-5">
-                <h1 class="text-center my-5">Thank you {{ name }} for registering</h1>
-                <h2 class="text-center my-5">You will automatically be redirected to login</h2>
+                <h1 class="text-center my-5">Welcome {{ name }}!</h1>
             </header>
             <main class="col my-5 d-flex justify-content-center">
                 <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
@@ -41,8 +40,8 @@
         },
         mounted() {
             setTimeout(() => {
-                this.$router.push({name: "Login"})
-            }, 5000)
+                this.$router.push({name: "Dashboard"})
+            }, 3000)
         }
     }
 </script>

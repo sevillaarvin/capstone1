@@ -22,6 +22,18 @@ export default new Vuex.Store({
         },
         getUserName: (state) => {
             return state.user.username
+        },
+        getPassword: (state) => {
+            return state.user.password
+        },
+        isLoggedIn: (state) => {
+            return state.login.isLoggedIn
+        },
+        getLoginName: (state) => {
+            return state.login.username
+        },
+        getLoginPassword: (state) => {
+            return state.login.password
         }
     },
     mutations: {
@@ -30,6 +42,18 @@ export default new Vuex.Store({
         },
         setUserName: (state, payload) => {
             state.user.username = payload
+        },
+        setPassword: (state, payload) => {
+            state.user.password = payload
+        },
+        setLoggedIn: (state, payload) => {
+            state.login.isLoggedIn = payload
+        },
+        setLoginName: (state, payload) => {
+            state.login.username = payload
+        },
+        setLoginPassword: (state, payload) => {
+            state.login.username = payload
         }
     },
     actions: {
@@ -38,6 +62,18 @@ export default new Vuex.Store({
         },
         setUserName: (context, payload) => {
             context.commit('setUserName', payload)
+        },
+        setPassword: (context, payload) => {
+            context.commit('setPassword', payload)
+        },
+        setLoggedIn: (context, payload) => {
+            context.commit('setLoggedIn', payload)
+        },
+        setLoginName: (context, payload) => {
+            context.commit('setLoginUser', payload)
+        },
+        setLoginPassword: (context, payload) => {
+            context.commit('setLoginPassword', payload)
         }
     }
 })

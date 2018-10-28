@@ -11,12 +11,15 @@ import Privacy from '../components/PrivacyPage.vue'
 import Register from '../components/Register.vue'
 import Login from '../components/Login.vue'
 import Thanks from '../components/Thanks.vue'
+import Welcome from '../components/Welcome.vue'
 import Dashboard from '../components/Dashboard.vue'
 import PageNotFound from '../components/PageNotFound.vue'
 
+import store from '../store/store'
+
 Vue.use(VueRouter)
 
-export default new VueRouter({
+const router = new VueRouter({
     mode: "history",
     scrollBehavior(to, from, savedPosition) {
         if (to.hash) {
@@ -30,7 +33,13 @@ export default new VueRouter({
         {
             path: "/",
             name: "Landing",
-            component: Landing
+            component: Landing,
+            beforeEnter: (to, from, next) => {
+                if (store.state.login.isLoggedIn) {
+                    next({name: "Dashboard"})
+                }
+                next()
+            }
         },
         {
             path: "/features",
@@ -70,22 +79,67 @@ export default new VueRouter({
         {
             path: "/register",
             name: "Register",
-            component: Register
+            component: Register,
+            beforeEnter: (to, from, next) => {
+                if (store.state.login.isLoggedIn) {
+                    next({name: "Dashboard"})
+                }
+                next()
+            }
         },
         {
             path: "/thanks",
             name: "Thanks",
-            component: Thanks
+            component: Thanks,
+            beforeEnter: (to, from, next) => {
+                if (store.state.login.isLoggedIn) {
+                    next({name: "Dashboard"})
+                }
+                next()
+            }
         },
         {
             path: "/login",
             name: "Login",
-            component: Login
+            component: Login,
+            beforeEnter: (to, from, next) => {
+                if (store.state.login.isLoggedIn) {
+                    next({name: "Dashboard"})
+                }
+                next()
+            }
+        },
+        {
+            path: "/welcome",
+            name: "Welcome",
+            component: Welcome,
+            beforeEnter: (to, from, next) => {
+                if (store.state.login.isLoggedIn) {
+                    if (from.name == "Login") {
+                        next()
+                        return
+                    }
+                    next({name: "Dashboard"})
+                    return
+                }
+                next()
+            }
         },
         {
             path: "/dashboard",
             name: "Dashboard",
-            component: Dashboard
+            component: Dashboard,
+            beforeEnter: (to, from, next) => {
+                if (!store.state.login.isLoggedIn) {
+                    next({name: "Landing"})
+                }
+                next()
+            }
+        },
+        {
+            path: "/logout",
+            name: "Logout",
+            redirect: {name: "Landing"}
         },
         {
             path: "/notfound",
@@ -98,3 +152,5 @@ export default new VueRouter({
         }
     ]
 })
+
+export default router

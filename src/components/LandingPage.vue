@@ -1,6 +1,6 @@
 <template>
     <div class="row bg-transparent">
-        <div class="col-12">
+        <div class="col-12 shadow">
             <app-home class="h-custom-full" :homeData="appData.home">
                 <slot name="search" slot="search"></slot>
             </app-home>
@@ -17,7 +17,7 @@
                 </div>
             </header>
         </div>
-        <div class="col-12 mb-5" v-for="(feature, i) in appData.features.list">
+        <div class="col-12 mb-5 shadow" v-for="(feature, i) in appData.features.list">
             <div class="row position-relative h-custom-half img-feature" :style="{backgroundImage: 'url(' + feature.img + ')'}">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
                     <polygon fill="#00BB77" points="0,100 100,0 100,100" v-if="i % 2 == 0"/>
@@ -41,7 +41,7 @@
                 </div>
             </header>
         </div>
-        <div class="col-12 bg-custom-other2 mb-5">
+        <div class="col-12 bg-custom-other2 mb-5 shadow">
             <app-about class="py-3 rounded-bottom" :aboutData="appData.about"></app-about>
         </div>
 
