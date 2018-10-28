@@ -5,8 +5,10 @@
   "author": "aes <sevillaarvin@gmail.com>",
   "private": true,
   "scripts": {
+    "start": "node server.js",
+    "heroku-postbuild": "webpack -p",
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "start": "npm run dev",
+    "startdev": "npm run dev",
     "build": "node build/build.js"
   },
   "dependencies": {
