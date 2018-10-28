@@ -8,6 +8,10 @@ import About from '../components/AboutPage.vue'
 import Contact from '../components/ContactPage.vue'
 import Terms from '../components/TermsPage.vue'
 import Privacy from '../components/PrivacyPage.vue'
+import Register from '../components/Register.vue'
+import Login from '../components/Login.vue'
+import Thanks from '../components/Thanks.vue'
+import Dashboard from '../components/Dashboard.vue'
 import PageNotFound from '../components/PageNotFound.vue'
 
 Vue.use(VueRouter)
@@ -62,6 +66,26 @@ export default new VueRouter({
             path: "/privacy",
             name: "Privacy",
             component: Privacy
+        },
+        {
+            path: "/register",
+            name: "Register",
+            component: Register
+        },
+        {
+            path: "/thanks",
+            name: "Thanks",
+            component: Thanks
+        },
+        {
+            path: "/login",
+            name: "Login",
+            component: Login
+        },
+        {
+            path: "/dashboard",
+            name: "Dashboard",
+            component: Dashboard
         },
         {
             path: "/notfound",

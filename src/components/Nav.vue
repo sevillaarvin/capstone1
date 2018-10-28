@@ -6,8 +6,8 @@
         <b-navbar-brand href="#" :to="{name: 'Landing'}">
             <img  class="img-logo rounded-circle border border-dark" :src="navData.logo" alt="logo">
         </b-navbar-brand>
-        <router-link :to="{name: 'Landing'}">
-            <span class="text-dark">Rentlify</span>
+        <router-link :to="{name: 'Landing'}" tag="li" active-class="active" exact>
+            <a class="text-dark">Rentlify</a>
         </router-link>
     
         <b-collapse is-nav id="nav_collapse">
