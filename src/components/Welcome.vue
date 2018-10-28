@@ -8,7 +8,7 @@
 
         <div class="row align-items-center border-top border-dark" slot="content">
             <header class="col-12 my-5">
-                <h1 class="text-center my-5">Welcome {{ name }}!</h1>
+                <h1 class="text-center my-5">Welcome {{ name || "Admin" }}!</h1>
             </header>
             <main class="col my-5 d-flex justify-content-center">
                 <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>

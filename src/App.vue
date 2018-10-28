@@ -224,7 +224,7 @@
 	                    ],
                         details: {
                             name: "Rentlify, Inc.",
-                            email: "support@iwantrent.com",
+                            email: "support@rentlify.com",
                             phone1: "02 123-4567",
                             phone2: "02 123-7654",
                             phone3: "02 987-7654",
@@ -348,7 +348,7 @@
                         mission: "Our mission is to provide the last platform for real estate transactions to provide lessors and lessees with safety and ease of transactions.",
                         description: "As we look ahead into the next century, leaders will be those who empower others.",
                         attribution: "Bill Gates",
-                        callToAction: "Are you ready to change the world?",
+                        callToAction: "Dare to change the world?",
                         actionBtn: "Join Our Team",
                         actionPage: "Contact"
                     },

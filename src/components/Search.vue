@@ -30,10 +30,81 @@
         },
         methods: {
             ...mapActions([
-                "setSearchQuery"
+                "setIsSearching",
+                "setSearchQuery",
+                "setSearchResults",
+                "setSearchResponse"
             ]),
             onSubmit(event) {
                 event.preventDefault()
+                /*
+                const url = "/api?q=" + this.search
+                this.axios.get(url).then(res => {
+                    this.setSearchResults(res.data)
+                }, err => {
+                    console.error(err.status)
+                    console.error(err.url)
+                    console.error(err)
+                })
+                */
+                const data = `[
+                    {
+                        "title": "title1",
+                        "description": "description1",
+                        "location": "location1",
+                        "price": "PHP 1,000.00"
+                    },
+                    {
+                        "title": "title2",
+                        "description": "description2",
+                        "location": "location2",
+                        "price": "PHP 1,000.00"
+                    },
+                    {
+                        "title": "title2",
+                        "description": "description2",
+                        "location": "location2",
+                        "price": "PHP 1,000.00"
+                    },
+                    {
+                        "title": "title2",
+                        "description": "description2",
+                        "location": "location2",
+                        "price": "PHP 1,000.00"
+                    },
+                    {
+                        "title": "title2",
+                        "description": "description2",
+                        "location": "location2",
+                        "price": "PHP 1,000.00"
+                    },
+                    {
+                        "title": "title2",
+                        "description": "description2",
+                        "location": "location2",
+                        "price": "PHP 1,000.00"
+                    },
+                    {
+                        "title": "title2",
+                        "description": "description2",
+                        "location": "location2",
+                        "price": "PHP 1,000.00"
+                    },
+                    {
+                        "title": "title3",
+                        "description": "description3",
+                        "location": "location3",
+                        "price": "PHP 1,000.00"
+                    }
+                ]`
+
+                this.setSearchResponse(this.$store.getters.getSearchQuery)
+                this.setIsSearching(true)
+                this.setSearchResults("{}")
+                setTimeout(() => {
+                    this.setSearchResults(data)
+                    this.setIsSearching(false)
+                }, 3000)
                 this.$router.push({name: "Results"})
             }
         },

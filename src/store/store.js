@@ -16,7 +16,10 @@ export default new Vuex.Store({
             isLoggedIn: false
         },
         search: {
-            query: ""
+            isSearching: false,
+            query: "",
+            results: '{}',
+            response: ""
         }
     },
     getters: {
@@ -38,8 +41,20 @@ export default new Vuex.Store({
         getLoginPassword: (state) => {
             return state.login.password
         },
+        getIsSearching: (state) => {
+            return state.search.isSearching
+        },
         getSearchQuery: (state) => {
             return state.search.query
+        },
+        getSearchResults: (state) => {
+            return state.search.results
+        },
+        getSearchResultsJSON: (state) => {
+            return JSON.parse(state.search.results)
+        },
+        getSearchResponse: (state) => {
+            return state.search.response
         },
     },
     mutations: {
@@ -61,9 +76,18 @@ export default new Vuex.Store({
         setLoginPassword: (state, payload) => {
             state.login.username = payload
         },
+        setIsSearching: (state, payload) => {
+            state.search.isSearching = payload
+        },
         setSearchQuery: (state, payload) => {
             state.search.query = payload
-        }
+        },
+        setSearchResults: (state, payload) => {
+            state.search.results = payload
+        },
+        setSearchResponse: (state, payload) => {
+            state.search.response = payload
+        },
     },
     actions: {
         setFullName: (context, payload) => {
@@ -84,8 +108,17 @@ export default new Vuex.Store({
         setLoginPassword: (context, payload) => {
             context.commit('setLoginPassword', payload)
         },
+        setIsSearching: (context, payload) => {
+            context.commit('setIsSearching', payload)
+        },
         setSearchQuery: (context, payload) => {
             context.commit('setSearchQuery', payload)
-        }
+        },
+        setSearchResults: (context, payload) => {
+            context.commit('setSearchResults', payload)
+        },
+        setSearchResponse: (context, payload) => {
+            context.commit('setSearchResponse', payload)
+        },
     }
 })

@@ -1,9 +1,25 @@
-var express = require('express');
-var path = require('path');
-var serveStatic = require('serve-static');
+const express = require('express');
+const axios = require('axios')
+const path = require('path');
+const serveStatic = require('serve-static');
 
-app = express();
+const app = express();
 app.use(serveStatic(__dirname + "/dist"));
+
+app.get("/api", (req, res) => {
+    const url = "https://www.olx.ph/all-results?q=" + req.query.q.replace(/ /g, "+")
+    axios.get(url)
+        .then(response => {
+            res.send(response.data)
+        })
+        .catch(err => {
+            try {
+                res.send(url + ": " + err.response.status + ", " + err.response.statusText + ", " + err.response.data)
+            } catch {
+                res.send(url + ": Something went wrong")
+            }
+        })
+})
 
 app.use((req, res, next) => {
     res.status(404)

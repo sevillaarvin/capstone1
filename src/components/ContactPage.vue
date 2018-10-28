@@ -42,7 +42,7 @@
                 </section>
             </section>
 
-            <section class="col-12">
+            <section class="col-12 pb-3">
                 <header class="py-3">
                     <h2 class="text-center my-3">Company Address</h2>
                 </header>
