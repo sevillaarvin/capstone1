@@ -79,7 +79,7 @@
                                 title: "AI Driven",
                                 content: "Experience the real power of AI technology.",
                                 longDescription: "Rentlify utilizes Artifical Intelligence to quickly provide reliable results. It does this through Machine Learning, by scouring millions of data in the internet, it can give a near perfect report of real estate leases all around the world.",
-                                img: require("./assets/images/feature1.jpeg"),
+                                img: require("./assets/images/feature1-main.jpeg"),
                                 properties: [
                                     "Artificial Intelligence",
                                     "Machine Learning"
@@ -91,7 +91,7 @@
                                 title: "Global Reach",
                                 content: "Rent anywhere, reliably, and safely.",
                                 longDescription: "By using the power of the internet, Rentlify is able to analyze millions of millions of data points all around the world.",
-                                img: require("./assets/images/feature2.jpeg"),
+                                img: require("./assets/images/feature2-main.jpeg"),
                                 properties: [
                                     "Craigslist",
                                     "Airbnb",
@@ -106,7 +106,7 @@
                                 title: "Comprehensive Reporting",
                                 content: "Assess property listings and find a perfect fit for you.",
                                 longDescription: "With the near infinite factors taken into account in renting, Rentlify provides a comprehensive report that is unmatched by no other. It includes:",
-                                img: require("./assets/images/feature3.jpeg"),
+                                img: require("./assets/images/feature3-main.jpeg"),
                                 properties: [
                                     "Natural Disaster Risks",
                                     "Political Landscape Risks",
@@ -321,17 +321,17 @@
                             {
                                 name: "Arvin Sevilla",
                                 details: "Genius, billionaire, playboy, philanthropist.",
-                                img: require("./assets/images/person.jpeg")
+                                img: require("./assets/images/person1.jpeg")
                             },
                             {
                                 name: "Sevilla Arvin",
                                 details: "Winners don't make excuses.",
-                                img: require("./assets/images/person.jpeg")
+                                img: require("./assets/images/person2.jpeg")
                             },
                             {
                                 name: "Allives Nivra",
                                 details: "Persistence is very important. You should not give up unless you are forced to give up.",
-                                img: require("./assets/images/person.jpeg")
+                                img: require("./assets/images/person3.jpeg")
                             }
                         ],
                         purpose: "Our company exists to empower people through artificial intelligence.",

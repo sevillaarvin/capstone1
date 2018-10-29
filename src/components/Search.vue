@@ -49,9 +49,9 @@
                 */
                 const data = `[
                     {
-                        "title": "title1",
-                        "description": "description1",
-                        "location": "location1",
+                        "title": "Craigslist",
+                        "description": "1BR Condo",
+                        "location": "Quezon City",
                         "price": "PHP 1,000.00"
                     },
                     {

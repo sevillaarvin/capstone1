@@ -9,7 +9,9 @@
                 <label class="col-3 col-lg-2" for="">Message</label>
                 <textarea class="col-9 col-lg-10 form-control" id="" rows="3" placeholder="Message"></textarea>
             </div>
-            <button class="btn btn-primary" type="submit">Send</button>
+            <router-link :to="{name: 'Contact'}">
+                <button class="btn btn-primary" type="submit">Send</button>
+            </router-link>
         </form>
         <aside class="col-12 col-md-6 p-3 p-lg-5">
             <div class="p-1 text-center text-md-left">
