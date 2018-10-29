@@ -25,11 +25,11 @@
                     <polygon fill="#E3D87E" points="0,100 0,0 100,100" v-else/>
                 </svg>
             </div>
-            <div class="row flex-column py-3 h-custom-quarter" :class="{'text-right': i % 2 == 0, 'bg-custom-primary': i % 2 == 0, 'text-light': i % 2 == 0,'bg-custom-other2': i % 2 == 1}">
-                <div class="px-5 py-2">
-                    <h4>{{ feature.content }}</h4>
+            <div class="row pt-5 pb-3 h-custom-quarter" :class="{'text-right': i % 2 == 0, 'bg-custom-primary': i % 2 == 0, 'text-light': i % 2 == 0,'bg-custom-other2': i % 2 == 1}">
+                <div class="col-12 px-5 pt-5 pb-1 my-0">
+                    <h6>{{ feature.content }}</h6>
                 </div>
-                <div class="px-5 py-2">
+                <div class="col-12 px-5 pb-5 pt-1">
                     <router-link :to="{name: 'Features'}">
                         <button class="btn btn-primary">Learn more</button>
                     </router-link>
@@ -94,7 +94,6 @@
 
     .h-custom-quarter {
         min-height: 25vh;
-        height: 25vh;
     }
 
     .img-feature {

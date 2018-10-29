@@ -77,12 +77,13 @@
                         list: [
                             {
                                 title: "AI Driven",
-                                content: "Experience the real power of AI technology.",
-                                longDescription: "Rentlify utilizes Artifical Intelligence to quickly provide reliable results. It does this through Machine Learning, by scouring millions of data in the internet, it can give a near perfect report of real estate leases all around the world.",
+                                content: "Experience the real power of AI driven technology.",
+                                longDescription: "Rentlify utilizes Artifical Intelligence to quickly provide reliable results. It does this through Machine Learning, by scouring millions of data in the internet, it can give a near perfect report of real estate listings.",
                                 img: require("./assets/images/feature1-main.jpeg"),
                                 properties: [
                                     "Artificial Intelligence",
-                                    "Machine Learning"
+                                    "Machine Learning",
+                                    "Big Data"
                                 ],
                                 read: "Get Started",
                                 link: "Register"
@@ -108,6 +109,7 @@
                                 longDescription: "With the near infinite factors taken into account in renting, Rentlify provides a comprehensive report that is unmatched by no other. It includes:",
                                 img: require("./assets/images/feature3-main.jpeg"),
                                 properties: [
+                                    "Market Analysis",
                                     "Natural Disaster Risks",
                                     "Political Landscape Risks",
                                     "Socioeconomic Risks",
@@ -190,7 +192,7 @@
                             },
                             {
                                 id: "q3",
-                                question: "Is my data save?",
+                                question: "Is my data safe?",
                                 answer: "Rentlify destroys your data a month after submission."
                             }
                         ]
@@ -230,6 +232,7 @@
                         ],
                         sales: {
                             name: "Sales",
+                            description: "Consult with our experts to get the best advice on how you can move forward.",
                             list: [
                                 {
                                     name: "General",
@@ -259,6 +262,7 @@
                         },
                         technical: {
                             name: "Technical Support",
+                            description: "Our Subject Matter Experts will skillfully guide you through troubleshooting your problems.",
                             list: [
                                 {
                                     name: "Account",
@@ -288,6 +292,7 @@
                         },
                         account: {
                             name: "Account Management",
+                            description: "Raise your concerns to our professional managers.",
                             list: [
                                 {
                                     name: "Customer",

@@ -3,7 +3,7 @@
     
         <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
     
-        <b-navbar-brand href="#" :to="{name: 'Landing'}">
+        <b-navbar-brand :to="{name: 'Landing'}">
             <img  class="img-logo rounded-circle border border-dark" :src="navData.logo" alt="logo">
         </b-navbar-brand>
         <router-link :to="{name: 'Landing'}" active-class="active" exact>
@@ -15,7 +15,7 @@
                 <b-nav-item v-for="link in navData.links" :to="{name: link.name}" exact>
                     {{ link.description }}
                 </b-nav-item>
-                <router-link class="px-md-2 py-2 py-md-0" v-for="action in navData.actions" :to="action.name" v-if="action.view == isLoggedIn">
+                <router-link class="px-md-2 py-2 py-md-0" v-for="action in navData.actions" :to="{name: action.name}" v-if="action.view == isLoggedIn">
                     <b-button :variant="action.variant" @click="signOut(action.name)">{{ action.description }}</b-button>
                 </router-link>
             </b-navbar-nav>

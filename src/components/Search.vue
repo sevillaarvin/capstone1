@@ -30,6 +30,7 @@
         },
         methods: {
             ...mapActions([
+                "setStandBy",
                 "setIsSearching",
                 "setSearchQuery",
                 "setSearchResults",
@@ -50,61 +51,103 @@
                 const data = `[
                     {
                         "title": "Craigslist",
-                        "description": "1BR Condo",
+                        "description": "Fully furnished 1BR Condo",
+                        "img": "/static/property1.jpeg",
                         "location": "Quezon City",
-                        "price": "PHP 1,000.00"
+                        "rating": "5",
+                        "price": "PHP 20,000.00 / mo"
                     },
                     {
-                        "title": "title2",
-                        "description": "description2",
-                        "location": "location2",
-                        "price": "PHP 1,000.00"
+                        "title": "Reddit",
+                        "description": "Semi furnished Studio Type",
+                        "img": "/static/property2.jpeg",
+                        "location": "Caloocan",
+                        "rating": "4",
+                        "price": "PHP 15,000.00 / mo"
                     },
                     {
-                        "title": "title2",
-                        "description": "description2",
-                        "location": "location2",
-                        "price": "PHP 1,000.00"
+                        "title": "Lamudi",
+                        "description": "Apartment for rent",
+                        "img": "/static/property3.jpeg",
+                        "location": "Makati",
+                        "rating": "5",
+                        "price": "PHP 9,000.00 / mo"
                     },
                     {
-                        "title": "title2",
-                        "description": "description2",
-                        "location": "location2",
-                        "price": "PHP 1,000.00"
+                        "title": "OLX",
+                        "description": "McKinley Condominum",
+                        "img": "/static/property4.jpeg",
+                        "location": "BGC",
+                        "rating": "5",
+                        "price": "PHP 543.00 / day"
                     },
                     {
-                        "title": "title2",
-                        "description": "description2",
-                        "location": "location2",
-                        "price": "PHP 1,000.00"
+                        "title": "Rentpad",
+                        "description": "BSA Towers bedspace",
+                        "img": "/static/property5.jpeg",
+                        "location": "Mandaluyong",
+                        "rating": "4",
+                        "price": "PHP 5,000.00 / mo"
                     },
                     {
-                        "title": "title2",
-                        "description": "description2",
-                        "location": "location2",
-                        "price": "PHP 1,000.00"
+                        "title": "Locanto",
+                        "description": "2BR Condo semi-furnished",
+                        "img": "/static/property6.jpeg",
+                        "location": "Pasig",
+                        "rating": "4",
+                        "price": "PHP 200,000.00 / year"
                     },
                     {
-                        "title": "title2",
-                        "description": "description2",
-                        "location": "location2",
-                        "price": "PHP 1,000.00"
+                        "title": "Airbnb",
+                        "description": "Condo-type for rent",
+                        "img": "/static/property7.jpeg",
+                        "location": "Pasay",
+                        "rating": "3",
+                        "price": "PHP 8,000.00 / mo"
                     },
                     {
-                        "title": "title3",
-                        "description": "description3",
-                        "location": "location3",
-                        "price": "PHP 1,000.00"
+                        "title": "Craigslist",
+                        "description": "Town house fully-furnished",
+                        "img": "/static/property8.jpeg",
+                        "location": "Laguna",
+                        "rating": "4",
+                        "price": "PHP 9,000.00 / mo"
+                    },
+                    {
+                        "title": "MyProperty",
+                        "description": "Apartment for rent unfurnished",
+                        "img": "/static/property9.jpeg",
+                        "location": "Cavite",
+                        "rating": "5",
+                        "price": "PHP 7,500.00 / mo"
+                    },
+                    {
+                        "title": "Lamudi",
+                        "description": "Apartment for rent",
+                        "img": "/static/property10.jpg",
+                        "location": "Batangas",
+                        "rating": "2",
+                        "price": "PHP 5,000.00 / mo"
                     }
                 ]`
 
                 this.setSearchResponse(this.$store.getters.getSearchQuery)
                 this.setIsSearching(true)
                 this.setSearchResults("{}")
+
+                /*
+                setTimeout(this.message("Test"), 0)
+                this.setStandBy("asdf")
+                setTimeout(this.message("Hmmmmm"), 1000)
+                */
+                setTimeout(() => {this.setStandBy("Analyzing behavior...")}, 1000)
+                setTimeout(() => {this.setStandBy("Building profile..")}, 2000)
+                setTimeout(() => {this.setStandBy("Curating list...")}, 3000)
+                setTimeout(() => {this.setStandBy("Contemplating life..")}, 4000)
                 setTimeout(() => {
                     this.setSearchResults(data)
                     this.setIsSearching(false)
-                }, 3000)
+                }, 5000)
                 this.$router.push({name: "Results"})
             }
         },

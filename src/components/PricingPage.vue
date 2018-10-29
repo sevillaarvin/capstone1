@@ -39,7 +39,7 @@
                                 </ul>
                             </div>
                             <div class="py-3">
-                                <router-link :to="price.link">
+                                <router-link :to="{name: price.link}">
                                     <a class="card-link btn" :class="price.buttonType" href="#">{{ price.action }}</a>
                                 </router-link>
                             </div>

@@ -38,6 +38,7 @@ const router = new VueRouter({
             beforeEnter: (to, from, next) => {
                 if (store.state.login.isLoggedIn) {
                     next({name: "Dashboard"})
+                    return
                 }
                 next()
             }
@@ -84,6 +85,7 @@ const router = new VueRouter({
             beforeEnter: (to, from, next) => {
                 if (store.state.login.isLoggedIn) {
                     next({name: "Dashboard"})
+                    return
                 }
                 next()
             }

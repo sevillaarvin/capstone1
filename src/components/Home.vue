@@ -2,11 +2,13 @@
     <div class="row">
         <div class="col-12 mb-0 pb-0 jumbotron d-flex flex-column justify-content-center" :style="{backgroundImage: 'url(' + homeData.img + ')'}">
             <div class="row">
-                <img class="col img-fluid img-logo" :src="homeData.logo">
+                <img class="col-12 img-fluid img-logo" :src="homeData.logo">
                 <div class="col-12 text-center">
                     <h1 class="display-4">{{ homeData.title }}</h1>
                     <p class="lead"> {{ homeData.content }}</p>
-                    <hr class="my-4 col-12 col-md-6">
+                    <div class="row">
+                        <hr class="my-4 col-10 col-md-6 col-lg-4">
+                    </div>
     	            <p class="lead">{{ homeData.details }}</p>
                 </div>
             </div>

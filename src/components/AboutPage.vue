@@ -16,7 +16,7 @@
                     <h1 class="col text-center p-5">Raison D'être</h1>
                 </header>
                 
-                <section class="curve-content row">
+                <section class="row h-custom-half-quarter">
                     <h4 class="col-12 col-md-8 offset-md-2 p-0 p-md-5 text-center">{{ appData.about.purpose }}</h4>
                 </section>
             </section>
@@ -51,25 +51,6 @@
             </div>
         </div>
     </app-page>
-    
-    <!--
-    <div class="row flex-grow-1">
-        <header class="col-12 mb-3">
-            <h1 class="text-center my-3">About Us</h1>
-        </header>
-        <div class="col-10 p-3 mb-3 rounded-right-custom bg-dark text-light">
-            <h1 class="font-weight-bold">Vision</h1>
-            <p>{{ about.vision }}</p>
-        </div>
-        <div class="col-10 offset-2 p-3 mb-3 rounded-left-custom bg-light text-dark">
-            <h1 class="font-weight-bold">Mission</h1>
-            <p>{{ about.mission }}</p>
-        </div>
-        <div class="col-12 mb-3 d-flex align-items-center">
-            <app-about :persons="about.team"></app-about>
-        </div>
-    </div>
-    -->
 </template>
 <script>
     import Page from './Page.vue'
@@ -104,6 +85,14 @@
         min-height: 50vh;
     }
 
+    .h-custom-quarter {
+        min-height: 25vh;
+    }
+
+    .h-custom-half-quarter {
+        min-height: 12.5vh;
+    }
+
     svg {
         position: absolute;
         bottom: 0;
@@ -114,9 +103,5 @@
     .curve {
         background-image: linear-gradient(#00BB77, #AAEE99);
         height: 100%;
-    }
-
-    .curve-content {
-        min-height: 12.5vh;
     }
 </style>

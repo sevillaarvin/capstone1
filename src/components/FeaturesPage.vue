@@ -43,7 +43,7 @@
             </section>
             <section class="col-12 my-5 pt-5 text-center">
                 <h2 class="text-center py-3">{{ appData.features.callToAction }}</h2>
-                <router-link :to="appData.features.actionPage">
+                <router-link :to="{name: appData.features.actionPage}">
                     <button class="btn btn-primary">{{ appData.features.actionBtn }}</button>
                 </router-link>
             </section>

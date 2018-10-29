@@ -16,6 +16,7 @@ export default new Vuex.Store({
             isLoggedIn: false
         },
         search: {
+            standBy: "Acquiring data...",
             isSearching: false,
             query: "",
             results: '{}',
@@ -40,6 +41,9 @@ export default new Vuex.Store({
         },
         getLoginPassword: (state) => {
             return state.login.password
+        },
+        getStandBy: (state) => {
+            return state.search.standBy
         },
         getIsSearching: (state) => {
             return state.search.isSearching
@@ -76,6 +80,9 @@ export default new Vuex.Store({
         setLoginPassword: (state, payload) => {
             state.login.username = payload
         },
+        setStandBy: (state, payload) => {
+            state.search.standBy = payload
+        },
         setIsSearching: (state, payload) => {
             state.search.isSearching = payload
         },
@@ -107,6 +114,9 @@ export default new Vuex.Store({
         },
         setLoginPassword: (context, payload) => {
             context.commit('setLoginPassword', payload)
+        },
+        setStandBy: (context, payload) => {
+            context.commit('setStandBy', payload)
         },
         setIsSearching: (context, payload) => {
             context.commit('setIsSearching', payload)

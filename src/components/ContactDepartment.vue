@@ -2,7 +2,7 @@
     <div class="row">
         <header class="col-12 text-center">
             <h1>{{ deptData.name }}</h1>
-            <p>Consult with our experts</p>
+            <p>{{ deptData.description }}</p>
         </header>
         <main class="col-12">
             <b-card-group columns>
