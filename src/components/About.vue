@@ -9,6 +9,7 @@
 
                 <div class="card-body">
                     <h1 class="card-title">{{ person.name }}</h1>
+                    <h3 class="card-subtitle mb-1">{{ person.position }}</h3>
                     <p class="card-text">{{ person.details }}</p>
                 </div>
             </div>

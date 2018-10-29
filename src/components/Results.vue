@@ -102,7 +102,7 @@
                         <div class="row flex-grow-1" v-else>
                             <div class="col-12">
                                 <div class="row">
-                                    <div class="col border m-1 p-1" v-for="result in getSearchResultsJSON">
+                                    <div class="col border rounded-top rounded-bottom m-1 p-1" v-for="result in getSearchResultsJSON">
                                         <div class="card-body">
                                             <img class="card-img-top img-fluid img-thumbnail" :src="result.img">
                                             <div class="text-center">

@@ -43,6 +43,6 @@
 </script>
 <style scoped>
     .img-logo {
-	min-width: 50px;
+	    min-width: 50px;
     }
 </style>

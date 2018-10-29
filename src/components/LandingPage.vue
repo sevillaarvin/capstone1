@@ -19,7 +19,7 @@
         </div>
         <div class="col-12 mb-5 shadow" v-for="(feature, i) in appData.features.list">
             <div class="row position-relative h-custom-half img-feature" :style="{backgroundImage: 'url(' + feature.img + ')'}">
-                <h1 class="col-12 pt-5 text-center text-light">{{ feature.title }}</h1>
+                <h1 class="header-custom col-12 pt-5 text-center text-light">{{ feature.title }}</h1>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
                     <polygon fill="#00BB77" points="0,100 100,0 100,100" v-if="i % 2 == 0"/>
                     <polygon fill="#E3D87E" points="0,100 0,0 100,100" v-else/>
@@ -27,7 +27,7 @@
             </div>
             <div class="row pt-5 pb-3 h-custom-quarter" :class="{'text-right': i % 2 == 0, 'bg-custom-primary': i % 2 == 0, 'text-light': i % 2 == 0,'bg-custom-other2': i % 2 == 1}">
                 <div class="col-12 px-5 pt-5 pb-1 my-0">
-                    <h6>{{ feature.content }}</h6>
+                    <h4>{{ feature.content }}</h4>
                 </div>
                 <div class="col-12 px-5 pb-5 pt-1">
                     <router-link :to="{name: 'Features'}">
@@ -107,5 +107,9 @@
         bottom: 0;
         width: 100%;
         height: 25%;
+    }
+
+    .header-custom {
+        background-color: rgba(0,0,0,0.3);
     }
 </style>

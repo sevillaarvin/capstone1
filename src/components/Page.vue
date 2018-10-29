@@ -6,7 +6,7 @@
         <div class="col-12">
             <slot name="search"></slot>
         </div>
-        <div class="col-12 d-flex flex-grow-1">
+        <div class="col-12 d-flex flex-grow-1 animated fadeIn">
             <slot name="content"></slot>
         </div>
         <div class="col-12">

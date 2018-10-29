@@ -33,13 +33,13 @@
                             description: "Pricing"
                         },
                         {
+                            name: "Contact",
+                            description: "Contact"
+                        },
+                        {
                             name: "About",
                             description: "About"
                         },
-                        {
-                            name: "Contact",
-                            description: "Contact"
-                        }
                     ],
                     actions: [
                         {
@@ -77,7 +77,7 @@
                         list: [
                             {
                                 title: "AI Driven",
-                                content: "Experience the real power of AI driven technology.",
+                                content: "Experience the real power of Artificial Intelligence.",
                                 longDescription: "Rentlify utilizes Artifical Intelligence to quickly provide reliable results. It does this through Machine Learning, by scouring millions of data in the internet, it can give a near perfect report of real estate listings.",
                                 img: require("./assets/images/feature1-main.jpeg"),
                                 properties: [
@@ -325,21 +325,24 @@
                         team: [
                             {
                                 name: "Arvin Sevilla",
+                                position: "CEO",
                                 details: "Genius, billionaire, playboy, philanthropist.",
                                 img: require("./assets/images/person1.jpeg")
                             },
                             {
                                 name: "Sevilla Arvin",
+                                position: "CTO",
                                 details: "Winners don't make excuses.",
                                 img: require("./assets/images/person2.jpeg")
                             },
                             {
                                 name: "Allives Nivra",
+                                position: "COO",
                                 details: "Persistence is very important. You should not give up unless you are forced to give up.",
                                 img: require("./assets/images/person3.jpeg")
                             }
                         ],
-                        purpose: "Our company exists to empower people through artificial intelligence.",
+                        purpose: "We exist to empower people through artificial intelligence.",
                         vision: "A world where there is a home for each and every individual.",
                         mission: "Our mission is to provide the best platform for renting residential properties to provide lessors and lessees with safety and ease of transactions.",
                         description: "As we look ahead into the next century, leaders will be those who empower others.",
