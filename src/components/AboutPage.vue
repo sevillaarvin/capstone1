@@ -21,13 +21,13 @@
                 </section>
             </section>
 
-            <div class="col-10 p-3 mb-3 rounded-right-custom bg-dark text-light h-custom-half">
-                <h1 class="font-weight-bold mt-5 py-5">Vision</h1>
-                <p>{{ appData.about.vision }}</p>
+            <div class="col-10 px-3 py-5 mb-5 rounded-right-custom bg-dark text-light h-custom-quarter">
+                <h1 class="font-weight-bold mt-3 py-5">Vision</h1>
+                <h3>{{ appData.about.vision }}</h3>
             </div>
-            <div class="col-10 offset-2 p-3 mb-3 rounded-left-custom bg-light text-dark h-custom-half">
-                <h1 class="font-weight-bold mt-5 py-5">Mission</h1>
-                <p>{{ appData.about.mission }}</p>
+            <div class="col-10 offset-2 px-3 py-5 mb-5 rounded-left-custom bg-light text-dark h-custom-quarter">
+                <h1 class="font-weight-bold mt-3 py-5">Mission</h1>
+                <h3>{{ appData.about.mission }}</h3>
             </div>
 
             <header class="col-12 py-5 border-top border-dark">

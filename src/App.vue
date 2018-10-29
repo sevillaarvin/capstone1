@@ -76,46 +76,46 @@
                     features: {
                         list: [
                             {
-                                title: "Feature1",
-                                content: "This is feature 1. This is its summary.",
-                                longDescription: "This is feature 1. It has such and such feature. All of the features in feature 1 are feature 1. This is a very nice feature because feature 1.",
+                                title: "AI Driven",
+                                content: "Experience the real power of AI technology.",
+                                longDescription: "Rentlify utilizes Artifical Intelligence to quickly provide reliable results. It does this through Machine Learning, by scouring millions of data in the internet, it can give a near perfect report of real estate leases all around the world.",
                                 img: require("./assets/images/feature1.jpeg"),
                                 properties: [
-                                    "Property1",
-                                    "Property2",
-                                    "Property3",
-                                    "Property4",
-                                    "Property5"
+                                    "Artificial Intelligence",
+                                    "Machine Learning"
                                 ],
-                                read: "Read more"
+                                read: "Get Started",
+                                link: "Register"
                             },
                             {
-                                title: "Feature2",
-                                content: "This is feature 2. This is its summary.",
-                                longDescription: "This is feature 2. It has such and such feature. All of the features in feature 2 are feature 2. This is a very nice feature because feature 2.",
+                                title: "Global Reach",
+                                content: "Rent anywhere, reliably, and safely.",
+                                longDescription: "By using the power of the internet, Rentlify is able to analyze millions of millions of data points all around the world.",
                                 img: require("./assets/images/feature2.jpeg"),
                                 properties: [
-                                    "Property1",
-                                    "Property2",
-                                    "Property3",
-                                    "Property4",
-                                    "Property5"
+                                    "Craigslist",
+                                    "Airbnb",
+                                    "OLX",
+                                    "Reddit",
+                                    "The whole internet"
                                 ],
-                                read: "Read more"
+                                read: "Explore",
+                                link: "Results"
                             },
                             {
-                                title: "Feature3",
-                                content: "This is feature 3. This is its summary.",
-                                longDescription: "This is feature 3. It has such and such feature. All of the features in feature 3 are feature 3. This is a very nice feature because feature 3.",
+                                title: "Comprehensive Reporting",
+                                content: "Assess property listings and find a perfect fit for you.",
+                                longDescription: "With the near infinite factors taken into account in renting, Rentlify provides a comprehensive report that is unmatched by no other. It includes:",
                                 img: require("./assets/images/feature3.jpeg"),
                                 properties: [
-                                    "Property1",
-                                    "Property2",
-                                    "Property3",
-                                    "Property4",
-                                    "Property5"
+                                    "Natural Disaster Risks",
+                                    "Political Landscape Risks",
+                                    "Socioeconomic Risks",
+                                    "Crime Rate",
+                                    "Poverty Rate"
                                 ],
-                                read: "Read more"
+                                read: "Rent Now",
+                                link: "Results"
                             }
                         ],
                         description: "Sometimes when you innovate, you make mistakes. It is best to admit them quickly, and get on with improving your other innovations.",
@@ -127,13 +127,13 @@
                     pricing: {
                         prices: [
                             {
-                                title: "Tier1",
-                                details: "Basic/Free",
+                                title: "Basic",
+                                details: "Free",
                                 emphasize: false,
                                 units: [
-                                    "This feature",
-                                    "That feature",
-                                    "Hmmm"
+                                    "Lifestyle Analysis",
+                                    "Global search",
+                                    "5 Star Rating System"
                                 ],
 		                        price: "FREE",
 		                        action: "Sign-up",
@@ -141,32 +141,33 @@
                                 link: "Register"
                             },
                             {
-                                title: "Tier2",
+                                title: "Economy",
                                 details: "Premium",
                                 emphasize: true,
                                 units: [
-                                    "This feature",
-                                    "That feature",
-                                    "Hmmm",
-			                        "More Features"
+                                    "Lifestyle Analysis",
+                                    "Global search",
+                                    "5 Star Rating System",
+			                        "Basic Reports"
                                 ],
-		                        price: "PHP 100.00 / mo",
+		                        price: "PHP 100.00 / Search",
 		                        action: "Purchase",
 		                        buttonType: "btn-primary shadow",
                                 link: "Register"
                             },
                             {
-                                title: "Tier3",
-                                details: "Enterprise",
+                                title: "Advanced",
+                                details: "Platinum",
                                 emphasize: false,
                                 units: [
-                                    "This feature",
-                                    "That feature",
-                                    "Hmmm",
-			                        "More Features",
-			                        "Even more features"
+                                    "Lifestyle Analysis",
+                                    "Global search",
+                                    "5 Star Rating System",
+			                        "Basic Reports",
+                                    "Comprehensive Reports",
+                                    "Lifetime Fee"
                                 ],
-		                        price: "PHP 1,000.00 / mo",
+		                        price: "PHP 1,000.00",
 		                        action: "Contact Us",
 		                        buttonType: "btn-success",
                                 link: "Contact"
@@ -179,29 +180,19 @@
                         list: [
                             {
                                 id: "q1",
-                                question: "Is this?",
-                                answer: "Yes, it is this."
+                                question: "How accurate is Rentlify?",
+                                answer: "Rentlify uses proprietary AI technology to provide relevant, reliable, and accurate reports."
                             },
                             {
                                 id: "q2",
-                                question: "Is that?",
-                                answer: "Yes, it is that."
+                                question: "Why is there a free pricing tier?",
+                                answer: "We love to give back to the community that have made this platform possible."
                             },
                             {
                                 id: "q3",
-                                question: "Will it?",
-                                answer: "Yes, it will."
-                            },
-                            {
-                                id: "q4",
-                                question: "Will that?",
-                                answer: "Yes, that will."
-                            },
-                            {
-                                id: "q5",
-                                question: "Won't it?",
-                                answer: "No, it won't."
-                            },
+                                question: "Is my data save?",
+                                answer: "Rentlify destroys your data a month after submission."
+                            }
                         ]
                     },
                     contact: {
@@ -241,111 +232,111 @@
                             name: "Sales",
                             list: [
                                 {
-                                    name: "General Sales",
+                                    name: "General",
                                     phone: "02 123-4567"
                                 },
                                 {
-                                    name: "Enterprise Sales",
+                                    name: "Premium",
+                                    phone: "02 456-4567"
+                                },
+                                {
+                                    name: "Platinum",
+                                    phone: "02 789-4567"
+                                },
+                                {
+                                    name: "Enterprise",
+                                    phone: "02 123-1234"
+                                },
+                                {
+                                    name: "Government",
                                     phone: "02 123-4567"
                                 },
                                 {
-                                    name: "Enterprise Sales",
+                                    name: "VIP",
                                     phone: "02 123-4567"
-                                },
-                                {
-                                    name: "Enterprise Sales",
-                                    phone: "02 123-4567"
-                                },
-                                {
-                                    name: "Enterprise Sales",
-                                    phone: "02 123-4567"
-                                },
-                                {
-                                    name: "Enterprise Sales",
-                                    phone: "02 123-4567"
-                                },
+                                }
                             ]
                         },
                         technical: {
                             name: "Technical Support",
                             list: [
                                 {
-                                    name: "General Sales",
+                                    name: "Account",
                                     phone: "02 123-4567"
                                 },
                                 {
-                                    name: "Enterprise Sales",
-                                    phone: "02 123-4567"
+                                    name: "Technical",
+                                    phone: "02 456-4567"
                                 },
                                 {
-                                    name: "Enterprise Sales",
-                                    phone: "02 123-4567"
+                                    name: "Terms and Conditions",
+                                    phone: "02 753-1529"
                                 },
                                 {
-                                    name: "Enterprise Sales",
-                                    phone: "02 123-4567"
+                                    name: "Data Privacy",
+                                    phone: "02 789-4567"
                                 },
                                 {
-                                    name: "Enterprise Sales",
-                                    phone: "02 123-4567"
+                                    name: "AI Tech",
+                                    phone: "02 846-1345"
                                 },
                                 {
-                                    name: "Enterprise Sales",
-                                    phone: "02 123-4567"
-                                },
+                                    name: "Fraud",
+                                    phone: "02 123-1234"
+                                }
                             ]
                         },
                         account: {
                             name: "Account Management",
                             list: [
                                 {
-                                    name: "General Sales",
+                                    name: "Customer",
                                     phone: "02 123-4567"
                                 },
                                 {
-                                    name: "Enterprise Sales",
-                                    phone: "02 123-4567"
+                                    name: "Premium",
+                                    phone: "02 456-4567"
                                 },
                                 {
-                                    name: "Enterprise Sales",
-                                    phone: "02 123-4567"
+                                    name: "Platinum",
+                                    phone: "02 789-4567"
                                 },
                                 {
-                                    name: "Enterprise Sales",
-                                    phone: "02 123-4567"
+                                    name: "Enterprise",
+                                    phone: "02 123-1234"
                                 },
                                 {
-                                    name: "Enterprise Sales",
-                                    phone: "02 123-4567"
+                                    name: "Feedback",
+                                    phone: "02 123-5678"
                                 },
                                 {
                                     name: "Account Sales",
-                                    phone: "02 123-4567"
-                                },
+                                    phone: "02 789-7890"
+                                }
                             ]
                         }
                     },
                     about: {
                         team: [
                             {
-                                name: "Person1",
-                                details: "This is person 1. He is a person. He is a such and such person with such and such background.",
+                                name: "Arvin Sevilla",
+                                details: "Genius, billionaire, playboy, philanthropist.",
                                 img: require("./assets/images/person.jpeg")
                             },
                             {
-                                name: "Person2",
-                                details: "This is person 2. He is a person. He is a such and such person with such and such background.",
+                                name: "Sevilla Arvin",
+                                details: "Winners don't make excuses.",
                                 img: require("./assets/images/person.jpeg")
                             },
                             {
-                                name: "Person3",
-                                details: "This is person 3. He is a person. He is a such and such person with such and such background.",
+                                name: "Allives Nivra",
+                                details: "Persistence is very important. You should not give up unless you are forced to give up.",
                                 img: require("./assets/images/person.jpeg")
                             }
                         ],
                         purpose: "Our company exists to empower people through artificial intelligence.",
-                        vision: "Our vision is a world where there is always a home for each and every individual in our society today that is completely lacking.",
-                        mission: "Our mission is to provide the last platform for real estate transactions to provide lessors and lessees with safety and ease of transactions.",
+                        vision: "A world where there is a home for each and every individual.",
+                        mission: "Our mission is to provide the best platform for renting residential properties to provide lessors and lessees with safety and ease of transactions.",
                         description: "As we look ahead into the next century, leaders will be those who empower others.",
                         attribution: "Bill Gates",
                         callToAction: "Dare to change the world?",

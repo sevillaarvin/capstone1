@@ -6,7 +6,7 @@
             </div>
         </div>
 
-        <div class="row align-items-center border-top border-dark" slot="content">
+        <div class="row flex-grow-1 align-items-center border-top border-dark" slot="content">
             <header class="col-12 my-5">
                 <h1 class="text-center my-5">Welcome {{ name || "Admin" }}!</h1>
             </header>

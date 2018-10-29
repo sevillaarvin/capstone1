@@ -20,7 +20,7 @@
                 <p class="p-0 m-0 font-italic">{{ appData.pricing.description }}</p>
                 <small><strong>{{ appData.pricing.attribution }}</strong></small>
             </main>
-            <section class="col-12">
+            <section class="col-12 shadow">
                 <div class="row">
                     <div class="col-12 col-lg d-flex align-items-stretch justify-content-center" v-for="price in appData.pricing.prices">
                         <div class="card text-center col mx-5 mx-lg-0" :class="price.emphasize ? 'my-1' : 'my-5'">
@@ -32,8 +32,9 @@
                                 <h3 class="card-subtitle">{{ price.title }}</h3>
                                 <p class="card-text pb-3 pt-3">{{ price.details }}</p>
                                 <ul class="list-group">
-                                    <li class="list-group-item border-right-0 border-left-0" v-for="unit in price.units">
-                                        {{ unit }}
+                                    <li class="list-group-item border-right-0 border-left-0" v-for="(unit, i) in price.units">
+                                        <strong v-if="i > 2">{{ unit }}</strong>
+                                        <span v-else>{{ unit }}</span>
                                     </li>
                                 </ul>
                             </div>
@@ -46,7 +47,7 @@
                     </div>
                 </div>
             </section>
-            <section id="#faq" class="col-12 mt-5 pb-5 bg-custom-primary text-light">
+            <section id="#faq" class="col-12 mt-5 pb-5 bg-custom-primary text-light shadow">
                 <app-faq :faqData="appData.faq"></app-faq>
             </section>
         </div>

@@ -6,7 +6,7 @@
             </div>
         </div>
 
-        <div class="row align-items-center border-top border-dark" slot="content">
+        <div class="row flex-grow-1 align-items-center border-top border-dark" slot="content">
             <header class="col-12 my-5">
                 <h1 class="text-center my-5">Thank you {{ name }} for registering</h1>
                 <h2 class="text-center my-5">You will automatically be redirected to login</h2>

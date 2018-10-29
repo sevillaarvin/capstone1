@@ -123,7 +123,7 @@ const router = new VueRouter({
                     next({name: "Dashboard"})
                     return
                 }
-                next()
+                next({name: "Landing"})
             }
         },
         {

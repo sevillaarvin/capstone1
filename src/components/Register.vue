@@ -12,7 +12,7 @@
             </div>
         </div>
 
-        <div class="row h-100 bg-light" slot="content">
+        <div class="row flex-grow-1 bg-light" slot="content">
             <div class="col-8 offset-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4 p-3 rounded-top rounded-bottom align-self-center bg-white shadow">
                 <header class="col-12">
                 	<h1 class="text-center my-3">Register</h1>

@@ -50,6 +50,7 @@
                     <div class="col-12 col-md-4 offset-md-2 text-center text-md-left">
                         <h3><strong>{{ appData.contact.details.name }}</strong></h3>
                         <p>{{ appData.contact.details.address }}</p>
+                        <p>{{ appData.contact.details.email }}</p>
                     </div>
                     <div class="col-12 col-md-5 embed-responsive embed-responsive-4by3">
                         <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.4101322936885!2d121.04148385087574!3d14.632645089731954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b7afe6a39331%3A0xd367e6dc5e274032!2sCaswynn+Building%2C+134+Timog+Ave%2C+Diliman%2C+Quezon+City%2C+Metro+Manila%2C+Philippines!5e0!3m2!1sen!2sin!4v1540603840894" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>

@@ -12,7 +12,7 @@
             </div>
         </div>
 
-        <div class="row h-100" slot="content">
+        <div class="row flex-grow-1" slot="content">
             <aside class="col-12 col-md-4 col-lg-2 bg-success">
                 <h3 v-show="'' != getSearchResponse">Search results for {{ getSearchResponse }}</h3>
                 <h5 class="text-center">Filter</h5>
@@ -57,11 +57,13 @@
                 </div>
                 <div class="row flex-grow-1">
                     <section class="col-12 my-3 d-flex">
+
                         <div class="flex-grow-1 d-flex flex-column align-items-center" v-if="searching">
                             <h1 class="text-center">Acquiring data...</h1>
                             <div class="col lds-ellipsis"><div></div><div></div><div></div><div></div></div>
                         </div>
                         <div v-else-if="standby">Search your dream home...</div>
+
                         <div class="row flex-grow-1 border border-primary" v-else>
                             <div class="col-12">
                                 <div class="card-columns">
@@ -77,6 +79,7 @@
                                 </div>
                             </div>
                         </div>
+
                     </section>
                 </div>
             </main>
