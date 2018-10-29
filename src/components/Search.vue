@@ -144,10 +144,14 @@
                 setTimeout(() => {this.setStandBy("Building profile..")}, 2000)
                 setTimeout(() => {this.setStandBy("Curating list...")}, 3000)
                 setTimeout(() => {this.setStandBy("Contemplating life..")}, 4000)
+                setTimeout(() => {this.setStandBy("Contemplating life...")}, 4500)
+                setTimeout(() => {this.setStandBy("Contemplating life..")}, 5000)
+                setTimeout(() => {this.setStandBy("Contemplating life...")}, 5500)
+                setTimeout(() => {this.setStandBy("Contemplating life..")}, 6000)
                 setTimeout(() => {
                     this.setSearchResults(data)
                     this.setIsSearching(false)
-                }, 5000)
+                }, 7000)
                 this.$router.push({name: "Results"})
             }
         },
