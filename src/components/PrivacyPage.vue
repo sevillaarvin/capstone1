@@ -6,7 +6,7 @@
             </div>
         </div>
 
-        <div class="row bg-custom-tertiary" slot="search">
+        <div class="row" slot="search">
             <div class="col-12">
                 <slot name="search"></slot>
             </div>
@@ -129,7 +129,7 @@
                 </ul>
             </div>
         </div>
-        <div class="row bg-custom-tertiary text-custom-other2" slot="footer">
+        <div class="row" slot="footer">
             <div class="col-12">
                 <slot name="footer"></slot>
             </div>

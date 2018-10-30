@@ -6,7 +6,7 @@
             </div>
         </div>
 
-        <div class="row bg-custom-tertiary" slot="search">
+        <div class="row" slot="search">
             <div class="col-12">
                 <slot name="search"></slot>
             </div>
@@ -14,7 +14,7 @@
 
         <div class="row" slot="content">
             <header class="col-12 pt-5">
-            	<h1 class="text-center my-3">Get In Touch</h1>
+            	<h1 class="text-center my-3 text-custom-primary">Get In Touch</h1>
             </header>
             <main class="col-12 pb-3 text-center">
                 <p class="p-0 m-0 font-italic">{{ appData.contact.description }}</p>
@@ -27,12 +27,12 @@
                 </b-nav>
             </nav>
             
-            <section class="col-12 col-md-8 offset-md-2">
+            <section class="col-12 col-md-8 offset-md-2 py-3">
                 <app-department :deptData="currentDeptData"></app-department>
             </section>
 
             <section class="col-12 py-3 text-center bg-custom-primary text-light">
-                <header class="pb-3">
+                <header class="py-3">
                     <h2 class="my-3">Main Phone Numbers</h2>
                 </header>
                 <section> 
@@ -42,13 +42,13 @@
                 </section>
             </section>
 
-            <section class="col-12 pb-3">
+            <section class="col-12 py-3">
                 <header class="py-3">
-                    <h2 class="text-center my-3">Company Address</h2>
+                    <h2 class="text-center my-3 text-custom-primary">Company Address</h2>
                 </header>
                 <div class="row">
                     <div class="col-12 col-md-4 offset-md-2 text-center text-md-left">
-                        <h3><strong>{{ appData.contact.details.name }}</strong></h3>
+                        <h3 class="text-custom-primary"><strong>{{ appData.contact.details.name }}</strong></h3>
                         <p>{{ appData.contact.details.address }}</p>
                         <p>{{ appData.contact.details.email }}</p>
                     </div>
@@ -60,7 +60,7 @@
 
         </div>
 
-        <div class="row bg-custom-tertiary text-custom-other2" slot="footer">
+        <div class="row" slot="footer">
             <div class="col-12">
                 <slot name="footer"></slot>
             </div>

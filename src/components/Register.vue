@@ -6,7 +6,7 @@
             </div>
         </div>
 
-        <div class="row bg-custom-tertiary" slot="search">
+        <div class="row" slot="search">
             <div class="col-12">
                 <slot name="search"></slot>
             </div>
@@ -15,12 +15,13 @@
         <div class="row flex-grow-1 bg-light" slot="content">
             <div class="col-8 offset-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4 p-3 rounded-top rounded-bottom align-self-center bg-white shadow">
                 <header class="col-12">
-                	<h1 class="text-center my-3">Register</h1>
+                	<h1 class="text-center my-3 text-custom-primary">Register</h1>
                 </header>
                 <main class="col-12 ">
                     <b-form @submit="onSubmit">
                         <b-form-group id="nameInputGroup"
                             horizontal
+                            class="text-custom-secondary"
                             label="Full Name:"
                             label-for="nameInput">
                             <b-form-input id="nameInput"
@@ -32,6 +33,7 @@
                         </b-form-group>
                         <b-form-group id="userInputGroup"
                             horizontal
+                            class="text-custom-secondary"
                             label="Username:"
                             label-for="userInput">
                             <b-form-input id="userInput"
@@ -43,6 +45,7 @@
                         </b-form-group>
                         <b-form-group id="emailInputGroup"
                             horizontal
+                            class="text-custom-secondary"
                             label="Email:"
                             label-for="emailInput">
                             <b-form-input id="emailInput"
@@ -54,6 +57,7 @@
                         </b-form-group>
                         <b-form-group id="passInputGroup"
                             horizontal
+                            class="text-custom-secondary"
                             label="Password:"
                             label-for="passInput">
                             <b-form-input id="passInput"
@@ -72,7 +76,7 @@
             </div>
         </div>
 
-        <div class="row bg-custom-tertiary text-custom-other2" slot="footer">
+        <div class="row" slot="footer">
             <div class="col-12">
                 <slot name="footer"></slot>
             </div>

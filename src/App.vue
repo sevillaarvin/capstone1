@@ -70,8 +70,10 @@
         	        	details: "AI driven platform to find your optimal home.",
                         callToAction: "Rent now",
                         secondaryAction: "Sign up",
-                        img: require("./assets/images/bg4.jpeg"),
-                        logo: require("./assets/images/logo3.svg")
+                        img: require("./assets/images/bg6.jpeg"),
+                        logo: require("./assets/images/logo3.svg"),
+                        bgSecondary: "#00B5D2",
+                        bgTertiary: "#8ED200"
                     },
                     features: {
                         list: [
@@ -122,8 +124,8 @@
                         ],
                         description: "Sometimes when you innovate, you make mistakes. It is best to admit them quickly, and get on with improving your other innovations.",
                         attribution: "Steve Jobs",
-                        callToAction: "Want to change your life?",
-                        actionBtn: "Learn more",
+                        callToAction: "Dare to change your life?",
+                        actionBtn: "Get It Now",
                         actionPage: "Pricing"
                     },
                     pricing: {
@@ -154,7 +156,7 @@
                                 ],
 		                        price: "PHP 100.00 / Search",
 		                        action: "Purchase",
-		                        buttonType: "btn-primary shadow",
+		                        buttonType: "btn-primary",
                                 link: "Register"
                             },
                             {
@@ -171,7 +173,7 @@
                                 ],
 		                        price: "PHP 1,000.00",
 		                        action: "Contact Us",
-		                        buttonType: "btn-success",
+		                        buttonType: "btn-info",
                                 link: "Contact"
                             }
                         ],
@@ -344,7 +346,9 @@
                         ],
                         purpose: "We exist to empower people through artificial intelligence.",
                         vision: "A world where there is a home for each and every individual.",
-                        mission: "Our mission is to provide the best platform for renting residential properties to provide lessors and lessees with safety and ease of transactions.",
+                        visionLogo: require("./assets/images/vision.svg"),
+                        mission: "Our mission is to provide the most powerful platform for renting residential properties to provide individuals safety and ease of transactions.",
+                        missionLogo: require("./assets/images/mission.svg"),
                         description: "As we look ahead into the next century, leaders will be those who empower others.",
                         attribution: "Bill Gates",
                         callToAction: "Dare to change the world?",
@@ -403,7 +407,7 @@
                         }
                     ],
                     others: [
-                        'Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>',
+                        'Icons made by <a href="http://www.freepik.com" title="Freepik" target="_blank">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon" target="_blank">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>',
                         "&copy; Rentlify 2018"
                     ]
                 }
@@ -420,24 +424,109 @@
 
 <style>
     body {
-        font-family: 'Niramit', sans-serif;
-        color: #0b0a07;
         /*
+        font-family: 'Niramit', sans-serif;
         background-color: #00BB77;
         background-color: #AAEE99;
+        color: #0b0a07;
         */
+        font-family: 'Arimo', sans-serif;
     }
 
     .text-custom-primary {
-        color: #00BB77;
+        /*
+        color: #00BB77!important;
+        */
+        color: #00BB38;
+    }
+
+    .btn-primary {
+        /*
+        background-color: #00BB38;
+        border-color: #00BB38;
+        */
+        background-color: #00BB38;
+        border-color: #00BB38;
+    }
+
+    .btn-outline-primary {
+        color: #00BB38;
+        border-color: #00BB38;
+    }
+
+    .btn-primary:hover {
+        background-color: #00952C;
+        border-color: #008829;
+    }
+
+    .btn-outline-primary:hover {
+        background-color: #00BB38;
+        border-color: #00BB38;
+    }
+
+    .btn-primary.focus, 
+    .btn-primary:focus {
+        background-color: #00BB38;
+        border-color: #00BB38;
+    }
+
+    .show > .btn-primary.dropdown-toggle {
+        background-color: #00BB38;
+        border-color: #00BB38;
+    }
+
+    .btn-secondary {
+        background-color: #00B5D2;
+        border-color: #00B5D2;
+    }
+
+    .btn-outline-secondary {
+        color: #00B5D2;
+        border-color: #00B5D2;
+    }
+
+    .btn-secondary:hover {
+        background-color: #0095AC;
+        border-color: #00899F;
+    }
+
+    .btn-outline-secondary:hover {
+        background-color: #00B5D2;
+        border-color: #00B5D2;
+    }
+
+    .btn-info {
+        background-color: #8ED200;
+        border-color: #8ED200;
+    }
+
+    .btn-outline-info {
+        color: #8ED200;
+        border-color: #8ED200;
+    }
+
+    .btn-info:hover {
+        background-color: #75AC00;
+        border-color: #6B9F00;
+    }
+
+    .btn-outline-info:hover {
+        background-color: #8ED200;
+        border-color: #8ED200;
     }
 
     .text-custom-secondary {
+        /*
         color: #AAEE99;
+        */
+        color: #00B5D2;
     }
 
     .text-custom-tertiary {
+        /*
         color: #0b0a07;
+        */
+        color: #8ED200;
     }
 
     .text-custom-other2 {
@@ -445,15 +534,24 @@
     }
 
     .bg-custom-primary {
+        /*
         background-color: #00BB77;
-    }
-
-    .bg-custom-tertiary {
-        background-color: #0B0A07;
+        */
+        background-color: #00BB38;
     }
 
     .bg-custom-secondary {
+        /*
         background-color: #AAEE99;
+        */
+        background-color: #00B5D2;
+    }
+
+    .bg-custom-tertiary {
+        /*
+        background-color: #0B0A07;
+        */
+        background-color: #8ED200;
     }
 
     .bg-custom-other {

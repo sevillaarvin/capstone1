@@ -6,7 +6,7 @@
                     <form class="input-group" @submit="onSubmit">
                         <input class="form-control" type="text" placeholder="Find your dream home..." v-model="search">
                         <div class="input-group-append">
-                            <span class="input-group-text"><i class="fas fa-search"></i></span>
+                            <span class="input-group-text" @click="onSubmit"><i class="fas fa-search"></i></span>
                         </div>
                     </form>
                 </div>
@@ -145,9 +145,9 @@
                 setTimeout(() => {this.setStandBy("Curating list...")}, 3000)
                 setTimeout(() => {this.setStandBy("Contemplating life..")}, 4000)
                 setTimeout(() => {this.setStandBy("Contemplating life...")}, 4500)
-                setTimeout(() => {this.setStandBy("Contemplating life..")}, 5000)
-                setTimeout(() => {this.setStandBy("Contemplating life...")}, 5500)
-                setTimeout(() => {this.setStandBy("Contemplating life..")}, 6000)
+                setTimeout(() => {this.setStandBy("Contemplating life....")}, 5000)
+                setTimeout(() => {this.setStandBy("Contemplating life.....")}, 5500)
+                setTimeout(() => {this.setStandBy("Contemplating life......")}, 6000)
                 setTimeout(() => {
                     this.setSearchResults(data)
                     this.setIsSearching(false)

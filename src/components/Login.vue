@@ -6,7 +6,7 @@
             </div>
         </div>
 
-        <div class="row bg-custom-tertiary" slot="search">
+        <div class="row" slot="search">
             <div class="col-12">
                 <slot name="search"></slot>
             </div>
@@ -15,11 +15,12 @@
         <div class="row flex-grow-1 bg-light" slot="content">
             <div class="col-8 offset-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4 p-3 rounded-top rounded-bottom align-self-center bg-white shadow">
                 <header class="col-12">
-                	<h1 class="text-center my-3">Login</h1>
+                	<h1 class="text-center my-3 text-custom-primary">Login</h1>
                 </header>
                 <main class="col-12 ">
                     <b-form @submit="onSubmit" @reset="onReset">
                         <b-form-group id="userInputGroup"
+                            class="text-custom-secondary"
                             label="Username:"
                             label-for="userInput">
                             <b-form-input id="userInput"
@@ -30,6 +31,7 @@
                             </b-form-input>
                         </b-form-group>
                         <b-form-group id="passInputGroup"
+                            class="text-custom-secondary"
                             label="Password:"
                             label-for="passInput">
                             <b-form-input id="passInput"
@@ -41,7 +43,7 @@
                         </b-form-group>
                         <b-form-group id="rememberInputGroup">
                             <b-form-checkbox-group v-model="form.checked" id="rememeberInput">
-                                <b-form-checkbox value="remember">Remember</b-form-checkbox>
+                                <b-form-checkbox value="remember" class="text-custom-secondary">Remember me</b-form-checkbox>
                             </b-form-checkbox-group>
                         </b-form-group>
                         <div class="d-flex justify-content-between">
@@ -62,7 +64,7 @@
             </div>
         </div>
 
-        <div class="row bg-custom-tertiary text-custom-other2" slot="footer">
+        <div class="row" slot="footer">
             <div class="col-12">
                 <slot name="footer"></slot>
             </div>

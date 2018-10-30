@@ -6,7 +6,7 @@
             </div>
         </div>
 
-        <div class="row bg-custom-tertiary" slot="search">
+        <div class="row" slot="search">
             <div class="col-12">
                 <slot name="search"></slot>
             </div>
@@ -14,7 +14,7 @@
 
         <div class="row" slot="content">
             <header class="col-12 pt-5">
-            	<h1 class="text-center my-3">Pricing</h1>
+            	<h1 class="text-center my-3 text-custom-primary">Pricing</h1>
             </header>
             <main class="col-12 pb-3 text-center">
                 <p class="p-0 m-0 font-italic">{{ appData.pricing.description }}</p>
@@ -26,7 +26,7 @@
                         <div class="card text-center col mx-5 mx-lg-0" :class="price.emphasize ? 'my-1' : 'my-5'">
                             <div class="card-body">
                                 <h1 class="card-title" v-if="price.emphasize">
-                                    <strong>{{ price.price }}</strong>
+                                    <strong :class="{'text-custom-primary': price.buttonType == 'btn-primary'}">{{ price.price }}</strong>
                                 </h1>
                                 <h2 class="card-title" v-else>{{ price.price }}</h2>
                                 <h3 class="card-subtitle">{{ price.title }}</h3>
@@ -40,7 +40,7 @@
                             </div>
                             <div class="py-3">
                                 <router-link :to="{name: price.link}">
-                                    <a class="card-link btn" :class="price.buttonType" href="#">{{ price.action }}</a>
+                                    <a class="card-link btn shadow" :class="price.buttonType" href="#">{{ price.action }}</a>
                                 </router-link>
                             </div>
                         </div>
@@ -51,7 +51,7 @@
                 <app-faq :faqData="appData.faq"></app-faq>
             </section>
         </div>
-        <div class="row bg-custom-tertiary text-custom-other2" slot="footer">
+        <div class="row" slot="footer">
             <div class="col-12">
                 <slot name="footer"></slot>
             </div>

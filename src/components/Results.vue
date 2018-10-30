@@ -6,7 +6,7 @@
             </div>
         </div>
 
-        <div class="row bg-custom-tertiary" slot="search">
+        <div class="row" slot="search">
             <div class="col-12">
                 <slot name="search"></slot>
             </div>
@@ -14,12 +14,12 @@
 
         <div class="row flex-grow-1" slot="content">
             <aside class="col-12 col-md-4 col-lg-2 border-right">
-                <form>
-                    <h4 v-if="'' != getSearchResponse">Search results for <strong>{{ getSearchResponse }}</strong></h4>
+                <form class="d-md-block" :class="{'d-none': getIsSearching}">
+                    <h4 class="text-custom-primary pt-3" v-if="'' != getSearchResponse">Search results for <strong>{{ getSearchResponse }}</strong></h4>
                     <h4 v-else>Search results for all properties</h4>
                     <hr>
                     <h5 class="text-center">Filter</h5>
-                    <div>
+                    <div pt-3>
                         <b-form-group label="Location">
                             <b-form-checkbox-group v-model="selectedLocation" name="location" :options="optionsLocation">
                             </b-form-checkbox-group>
@@ -62,26 +62,26 @@
                     <header class="col-12 py-2 p-md-3 border-bottom">
                         <div class="row">
                             <h3 class="col d-none d-lg-block text-center">Sort by</h3>
-                            <div class="col input-group">
-                                <b-dropdown id="ddown1" text="Relevance" class="m-md-2 mx-auto">
+                            <div class="col input-group my-3">
+                                <b-dropdown id="ddown1" text="Relevance" class="m-md-2 mx-auto" variant="primary">
                                     <b-dropdown-item>Ascending</b-dropdown-item>
                                     <b-dropdown-item>Descending</b-dropdown-item>
                                 </b-dropdown>
                             </div>
-                            <div class="col input-group">
-                                <b-dropdown id="ddown2" text="Price" class="m-md-2 mx-auto">
+                            <div class="col input-group my-3">
+                                <b-dropdown id="ddown2" text="Price" class="m-md-2 mx-auto" variant="primary">
                                     <b-dropdown-item>Highest to Lowest</b-dropdown-item>
                                     <b-dropdown-item>Lowest to Heighest</b-dropdown-item>
                                 </b-dropdown>
                             </div>
-                            <div class="col input-group">
-                                <b-dropdown id="ddown3" text="Rating" class="m-md-2 mx-auto">
+                            <div class="col input-group my-3">
+                                <b-dropdown id="ddown3" text="Rating" class="m-md-2 mx-auto" variant="primary">
                                     <b-dropdown-item>Ascending</b-dropdown-item>
                                     <b-dropdown-item>Descending</b-dropdown-item>
                                 </b-dropdown>
                             </div>
-                            <div class="col input-group">
-                                <b-dropdown id="ddown4" text="Date" class="m-md-2 mx-auto">
+                            <div class="col input-group my-3">
+                                <b-dropdown id="ddown4" text="Date" class="m-md-2 mx-auto" variant="primary">
                                     <b-dropdown-item>Most Recent First</b-dropdown-item>
                                     <b-dropdown-item>Most Recent Last</b-dropdown-item>
                                 </b-dropdown>
@@ -101,7 +101,7 @@
 
                         <div class="row flex-grow-1" v-else>
                             <div class="col-12">
-                                <div class="row">
+                                <div class="row mx-1">
                                     <div class="col border rounded-top rounded-bottom m-1 p-1" v-for="result in getSearchResultsJSON">
                                         <div class="card-body">
                                             <img class="card-img-top img-fluid img-thumbnail" :src="result.img">
@@ -109,9 +109,9 @@
                                                 <span v-for="star in 5"><span class="fa fa-star" :class="{checked: star <= result.rating}"></span></span>
                                             </div>
                                             <hr>
-                                            <h3 class="card-title text-center">{{ result.price }}</h3>
+                                            <h3 class="card-title text-center text-custom-secondary">{{ result.price }}</h3>
                                             <h5 class="card-title text-center">{{ result.title }}</h5>
-                                            <p class="card-subtitle">{{ result.description }} {{ getSearchResponse }}</p>
+                                            <p class="card-subtitle">{{ result.description }} <span class="text-danger">{{ getSearchResponse }}</span></p>
                                             <p class="card-text"><small>{{ result.location }}</small></p>
                                         </div>
                                     </div>
@@ -124,7 +124,7 @@
             </main>
         </div>
 
-        <div class="row bg-custom-tertiary text-custom-other2" slot="footer">
+        <div class="row" slot="footer">
             <div class="col-12">
                 <slot name="footer"></slot>
             </div>
@@ -225,7 +225,7 @@
   width: 11px;
   height: 11px;
   border-radius: 50%;
-  background: #333;
+  background: #000FC8;
   animation-timing-function: cubic-bezier(0, 1, 1, 0);
 }
 .lds-ellipsis div:nth-child(1) {

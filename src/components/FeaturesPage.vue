@@ -6,7 +6,7 @@
             </div>
         </div>
 
-        <div class="row bg-custom-tertiary" slot="search">
+        <div class="row" slot="search">
             <div class="col-12">
                 <slot name="search"></slot>
             </div>
@@ -14,7 +14,7 @@
 
         <div class="row" slot="content">
             <header class="col-12 pt-5">
-            	<h1 class="text-center my-3">How It Works</h1>
+            	<h1 class="text-center my-3 text-custom-primary">How It Works</h1>
             </header>
             <main class="col-12 pb-3 text-center">
                 <p class="p-0 m-0 font-italic">{{ appData.features.description }}</p>
@@ -38,18 +38,19 @@
                                 </ul>
                             </div>
                         </div>
+                        <hr>
                     </div>
                 </div>
             </section>
             <section class="col-12 my-5 pt-5 text-center">
-                <h2 class="text-center py-3">{{ appData.features.callToAction }}</h2>
+                <h2 class="text-center py-3 text-center text-custom-secondary">{{ appData.features.callToAction }}</h2>
                 <router-link :to="{name: appData.features.actionPage}">
                     <button class="btn btn-primary">{{ appData.features.actionBtn }}</button>
                 </router-link>
             </section>
         </div>
 
-        <div class="row bg-custom-tertiary text-custom-other2" slot="footer">
+        <div class="row" slot="footer">
             <div class="col-12">
                 <slot name="footer"></slot>
             </div>

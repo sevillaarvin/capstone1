@@ -1,13 +1,13 @@
 <template>
-    <b-navbar class="row bg-transparent" toggleable="md" type="light" variant="">
+    <b-navbar class="row bg-custom-transparent text-custom-primary" toggleable="md" type="light" variant="">
     
         <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
     
         <b-navbar-brand :to="{name: 'Landing'}">
-            <img  class="img-logo rounded-circle border border-dark" :src="navData.logo" alt="logo">
+            <img  class="img-fluid img-logo rounded-circle" :src="navData.logo" alt="logo">
         </b-navbar-brand>
         <router-link :to="{name: 'Landing'}" active-class="active" exact>
-            <a class="text-dark">Rentlify</a>
+            <strong class="text-custom-primary">Rentlify</strong>
         </router-link>
     
         <b-collapse is-nav id="nav_collapse">
@@ -44,5 +44,10 @@
 <style scoped>
     .img-logo {
 	    min-width: 50px;
+        max-width: 50px;
+    }
+
+    .bg-custom-transparent {
+        background: rgba(255,255,255,0.3);
     }
 </style>

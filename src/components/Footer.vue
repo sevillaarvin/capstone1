@@ -1,5 +1,6 @@
 <template>
     <footer class="row">
+        <!-- SOCIAL LINKS -->
         <section class="col-12 col-md-6 d-flex justify-content-center align-items-center">
             <ul class="p-0 p-md-3 nav justify-content-center">
                 <li class="nav-item" v-for="social in footerData.socials">
@@ -10,16 +11,17 @@
             </ul>
         </section>
 
+        <!-- LEGAL LINKS -->
         <section class="col-12 col-md-6">
             <ul class="nav justify-content-center">
                 <li class="nav-item" v-for="link in footerData.links">
                     <router-link :to="link.name">
-                        <a class="nav-link text-custom-primary" href="">{{ link.description }}</a>
+                        <a class="nav-link text-light">{{ link.description }}</a>
                     </router-link>
                 </li>
             </ul>
             <div v-for="otherLink in footerData.others" class="text-center">
-                <span v-html="otherLink"></span>
+                <span v-html="otherLink" class="text-light"></span>
             </div>
         </section>
     </footer>
