@@ -10,12 +10,31 @@
     <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet"> 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
     <link rel="shortcut icon" href="/static/favicon.ico">
 
     <title>Rentlify - Revolutionize your life</title>
   </head>
   <body>
+    <div class="spinner-wrapper">
+        <div class="content-wrapper">
+            <div class="reverse-spinner"></div>
+            <h1>Building your future...</h1>
+        </div>
+    </div>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    
+    <script>
+        (function () {
+            const spinner = document.getElementsByClassName("spinner-wrapper")[0]
+            setInterval(() => {
+                spinner.style.opacity = 0;
+                setInterval(() => {
+                    spinner.style.display = 'none'
+                }, 2000)
+            }, 500)
+        })()
+    </script>
   </body>
 </html>
